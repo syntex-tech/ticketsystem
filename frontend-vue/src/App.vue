@@ -1,7 +1,16 @@
-<template>
-  
-</template>
+<script>
+  import NavbarVue from './components/Navbar.vue';
+  import FooterVue from './components/Footer.vue';
 
-<script setup>
-  
+  export default {
+    components: {
+        NavbarVue,
+        FooterVue
+    }
+  }
 </script>
+
+<template>
+    <NavbarVue />
+    <FooterVue />
+</template>
