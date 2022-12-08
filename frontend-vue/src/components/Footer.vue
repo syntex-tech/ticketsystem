@@ -57,7 +57,7 @@
                     style="width: 60px; background-color: #7c4dff; height: 2px"
                     />
                 <p>
-                    Start your journey now with AlpTicket!
+                    Start your journey now with SkyPath!
                 </p>
                 </div>
                 <!-- Grid column -->
@@ -135,7 +135,7 @@
             >
             © 2020 Copyright:
             <a class="text-white" href="#"
-            >AlpTicket</a
+            >SkyPath</a
             >
         </div>
         <!-- Copyright -->
