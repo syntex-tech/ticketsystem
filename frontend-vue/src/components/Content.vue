@@ -11,30 +11,30 @@
             <div class="carousel-item active">
               <img class="first-slide" src="../assets/images/panorama_mountains3.jpg" alt="First slide">
               <div class="container">
-                <div class="carousel-caption text-left">
-                  <h1>Example headline.</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                <div class="carousel-caption text-border">
+                  <h1>SkyPath.</h1>
+                  <p>We offer you an easy path to peace, freedom and happiness - the mountains. Start your journey now.</p>
+                  <p><a class="btn btn-lg btn-primary btn-opac" href="#" role="button">Book your tickets now</a></p>
                 </div>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+              <img class="second-slide" src="../assets/images/explore_nature.jpg" alt="Second slide">
               <div class="container">
-                <div class="carousel-caption">
-                  <h1>Another example headline.</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <div class="carousel-caption text-border">
+                  <h1 >Explore nature.</h1>
+                  <p>Not sure where to start? Learn more about the region and the many ways to enjoy life.</p>
                   <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
                 </div>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+              <img class="third-slide" src="../assets/images/family_smile.jpg" alt="Third slide">
               <div class="container">
-                <div class="carousel-caption text-right">
-                  <h1>One more for good measure.</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                <div class="carousel-caption text-border">
+                  <h1>Enjoy together.</h1>
+                  <p>Vacation time means family time? Don't worry, we got you covered.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Book your family ticket now</a></p>
                 </div>
               </div>
             </div>
@@ -132,8 +132,7 @@
   /* Padding below the footer and lighter body text */
 
   body {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    
     color: #5a5a5a;
   }
 
@@ -147,7 +146,7 @@
   }
   /* Since positioning the image, we need to help out the caption */
   .carousel-caption {
-    bottom: 3rem;
+    bottom: 5rem;
     z-index: 10;
   }
 
@@ -163,6 +162,30 @@
     min-width: 100%;
     height: 32rem;
   }
+
+  .text-color-gray {
+    color: rgb(57, 131, 177);
+    font-weight: bold;
+    
+  }
+
+  .text-margin-slide1 {
+    margin-bottom: 12rem;
+  }
+
+  .text-color-small {
+    color: rgb(34, 34, 34);
+    font-weight: bold;
+  }
+  
+  .text-border {
+    border-style: solid;
+    border-color: rgb(34, 34, 34);
+    background: rgb(34, 34, 34);
+    border-radius: 75px;
+    opacity: 90%;
+  }
+
 
 
   /* MARKETING CONTENT
