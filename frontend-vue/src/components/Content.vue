@@ -59,19 +59,19 @@
           <!-- Three columns of text below the carousel -->
           <div class="row">
             <div class="col-lg-4">
-              <img class="rounded-circle border border-info" src="../assets/images/small icons/solo.png" alt="Generic placeholder image" width="140" height="140">
+              <img class="rounded-circle border border-info" src="../assets/images/small icons/solo1.png" alt="Generic placeholder image" width="140" height="140">
               <h2>SkiPass SOLO</h2>
               <p>We need to add a meaningful text here.. Not sure what it is gonna be.</p>
               <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
-              <img class="rounded-circle border border-info" src="../assets/images/small icons/combo.png" alt="Generic placeholder image" width="140" height="140">
+              <img class="rounded-circle border border-info" src="../assets/images/small icons/combo2.png" alt="Generic placeholder image" width="140" height="140">
               <h2>SkiPass COMBO</h2>
               <p>We need to add a meaningful text here.. Not sure what it is gonna be.</p>
               <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
-              <img class="rounded-circle border border-info" src="../assets/images/small icons/family.png" alt="Generic placeholder image" width="140" height="140">
+              <img class="rounded-circle border border-info" src="../assets/images/small icons/family3.png" alt="Generic placeholder image" width="140" height="140">
               <h2>SkiPass FAMILY</h2>
               <p>We need to add a meaningful text here.. Not sure what it is gonna be.</p>
               <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
