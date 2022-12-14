@@ -85,11 +85,11 @@
   
           <div class="row featurette">
             <div class="col-md-7">
-              <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+              <h2 class="featurette-heading">Easy Access to the Skies. <span class="text-muted">It'll blow your mind.</span></h2>
+              <p class="lead">Our goal is to use the opportunitites given to us through digitalization. We want to make freedom and peace in the mountains accessible to everyone. Just a few clicks, and you are good to go to start your journey!</p>
             </div>
-            <div class="col-md-5">
-              <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+            <div class="col-md-3">
+              <img class="featurette-image img-fluid mx-auto" src="../assets/images/small icons/cloudy.png" alt="Generic placeholder image">
             </div>
           </div>
   
@@ -97,11 +97,11 @@
   
           <div class="row featurette">
             <div class="col-md-7 order-md-2">
-              <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+              <h2 class="featurette-heading">Everything in one app. <span class="text-muted">See for yourself.</span></h2>
+              <p class="lead">Whether you want to book your tickets, find out about your desired region or manage your vacation - we got you. SkyPath concetrates those factors in one single application. No excessive clicking. No confusing interfaces. </p>
             </div>
-            <div class="col-md-5 order-md-1">
-              <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+            <div class="col-md-3 order-md-1">
+              <img class="featurette-image img-fluid mx-auto" src="../assets/images/small icons/puzzle.png" alt="Generic placeholder image">
             </div>
           </div>
   
@@ -109,11 +109,11 @@
   
           <div class="row featurette">
             <div class="col-md-7">
-              <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+              <h2 class="featurette-heading">Start your journey now. <span class="text-muted">Safe and sound.</span></h2>
+              <p class="lead">We value privacy - don't worry about your data. Your tickets belong to you and only to you! We use advanced technology to verify customers and encrypt their data.</p>
             </div>
-            <div class="col-md-5">
-              <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+            <div class="col-md-3">
+              <img class="featurette-image img-fluid mx-auto" src="../assets/images/small icons/shield.png" alt="Generic placeholder image">
             </div>
           </div>
   
