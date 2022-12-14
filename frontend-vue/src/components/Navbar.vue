@@ -27,12 +27,20 @@
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
+      <div class="button-block ms-auto">
+        <button class="button is-xl is-dark">
+          Sign In
+        </button>
+      </div>
     </ul>
-    
+
+    <!-- Searchbar (currently disabled)
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
+    -->
+
   </div>
 </nav>
 </template>
