@@ -1,7 +1,7 @@
 <template>
     <main role="main">
 
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div id="myCarousel" class="carousel slide" data-interval="12000" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -9,7 +9,12 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
+              <!--
               <img class="first-slide" src="../assets/images/panorama_mountains3.jpg" alt="First slide">
+              -->
+              <video class="w-100" autoplay loop muted>
+                <source src="../assets/videos/snowvideo.mp4" type="video/mp4" />
+              </video>
               <div class="container">
                 <div class="carousel-caption text-border">
                   <h1>Savor Liberty.</h1>
@@ -19,7 +24,12 @@
               </div>
             </div>
             <div class="carousel-item">
+              <!--
               <img class="second-slide" src="../assets/images/explore_nature.jpg" alt="Second slide">
+              -->
+              <video class="w-100" autoplay loop muted>
+                <source src="../assets/videos/explorenature.mp4" type="video/mp4" />
+              </video>
               <div class="container">
                 <div class="carousel-caption text-border">
                   <h1 >Explore nature.</h1>
@@ -29,7 +39,12 @@
               </div>
             </div>
             <div class="carousel-item">
+              <!--
               <img class="third-slide" src="../assets/images/family_smile.jpg" alt="Third slide">
+              -->
+              <video class="w-100" autoplay loop muted>
+                <source src="../assets/videos/snowfamily.mp4" type="video/mp4" />
+              </video>
               <div class="container">
                 <div class="carousel-caption text-border">
                   <h1>Enjoy together.</h1>
@@ -152,7 +167,7 @@
 
   /* Declare heights because of positioning of img element */
   .carousel-item {
-    height: 32rem;
+    height: 40rem;
     background-color: #777;
   }
   .carousel-item > img {
