@@ -8,6 +8,10 @@ index.get('/', (req,res) => {
     res.send('We are on home');
 });
 
+index.get('/tickets', (req,res) => {
+    res.send('Hier kannst du den Skipass kaufen!');
+});
+
 //Connect to DB
 
 mongoose.set('strictQuery', true);
