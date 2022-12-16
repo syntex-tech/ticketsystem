@@ -10,7 +10,9 @@ index.get('/', (req,res) => {
 
 index.get('/tickets', (req,res) => {
     res.send('Hier kannst du den Skipass kaufen!');
+    console.log(req.body);
 });
+
 
 //Connect to DB
 
