@@ -2,6 +2,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 const index = express();
 
+//Import ROUTES
+
+const ticketRoute = require('./backend-nodejs/routes/ticket');
+
+index.use('/tickets', ticketRoute)
+
 //ROUTES
 
 index.get('/', (req,res) => {

@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const 'Ticket' = require('../model/SkipassTicket');
+//const 'Ticket' = require('../model/SkipassTicket');
 
-router.get('/tickets', (req,res) => {
+router.get('/', (req,res) => {
     res.send('Hier kannst du den Skipass kaufen!');
 });
 
-router.post('/tickets', (req,res) => {
+router.post('/', (req,res) => {
     console.log(req.body);
 });
 
