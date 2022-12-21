@@ -3,10 +3,10 @@ const mongoose = require('mongoose');
 
 const TicketSchema = mongoose.Schema({
     
-    Ticketnummer: {
+    /*Ticketnummer: {
         type: String,
         default: mongoose.ObjectId,
-    },
+    },*/
     Vorname: {
         type: String,
         required: true,
@@ -53,4 +53,4 @@ const TicketSchema = mongoose.Schema({
     },
 })
 
-module.exports = mongoose.model('Ticket', TicketSchema);
+module.exports = mongoose.model('SkipassTicket', TicketSchema);

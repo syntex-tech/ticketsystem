@@ -1,22 +1,20 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const index = express();
+const bodyParser = require('body-parser');
+
+index.use(bodyParser.json());
 
 //Import ROUTES
 
 const ticketRoute = require('./backend-nodejs/routes/ticket');
 
-index.use('/tickets', ticketRoute)
+index.use('/ticket', ticketRoute)
 
 //ROUTES
 
 index.get('/', (req,res) => {
     res.send('We are on home');
-});
-
-index.get('/tickets', (req,res) => {
-    res.send('Hier kannst du den Skipass kaufen!');
-    console.log(req.body);
 });
 
 
