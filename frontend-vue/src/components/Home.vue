@@ -141,6 +141,11 @@
   
 </template>
 
+<script>
+export default {
+};
+</script>
+
 <style>
   /* GLOBAL STYLES
   -------------------------------------------------- */

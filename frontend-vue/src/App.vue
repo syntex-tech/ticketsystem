@@ -1,19 +1,14 @@
-<script>
-  import NavbarVue from './components/Navbar.vue';
-  import FooterVue from './components/Footer.vue';
-  import ContentVue from './components/Content.vue';
+<template>
+  <div>
+    <router-view></router-view>
+  </div>
+</template>
 
+<script>
   export default {
     components: {
-        NavbarVue,
-        FooterVue,
-        ContentVue
+        
     }
   }
 </script>
 
-<template>
-    <NavbarVue />
-    <ContentVue />
-    <FooterVue />
-</template>

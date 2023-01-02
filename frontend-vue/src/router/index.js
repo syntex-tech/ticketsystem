@@ -1,23 +1,25 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import App from './App.vue'
-import About from '' 
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Home from '../components/Home.vue';
+import About from '../components/About.vue';
+
+Vue.use(VueRouter);
 
 const routes = [
-    {
-        path: '/',
-        name: 'App',
-        componen: App
-    },
-    {
-        path: '/about',
-        name: 'About',
-        component: About
-    }
-]
+  {
+    path: '/',
+    component: Home,
+  },
+  {
+    path: '/about',
+    component: About,
+  },
+];
 
-const router = createRouter({
-    history: createWebHistory(process.env.BASE_URL),
-    routes
-})
+const router = new VueRouter({
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes,
+});
 
-export default router
+export default router;
