@@ -13,25 +13,25 @@
       <li class="nav-item">
         <router-link style="text-decoration: none; color: inherit;" to="/about"><a class="nav-link" href="#">Über uns </a></router-link>
       </li>
+      <li class="nav-item">
+        <router-link style="text-decoration: none; color: inherit;" to="/info"><a class="nav-link" href="#">Informationen </a></router-link>
+      </li>
+      <li class="nav-item">
+        <router-link style="text-decoration: none; color: inherit;" to="/ticketshop"><a class="nav-link" href="#">Ticketshop </a></router-link>
+      </li>
+    </ul>  
+    <ul class="navbar-nav me-auto"> 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
+          Mein Profil
+        </a>  
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Login</a>
+          <a class="dropdown-item" href="#">Registrieren</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-      <div class="button-block ms-auto">
-        <button class="button is-xl is-dark">
-          Sign In
-        </button>
-      </div>
     </ul>
 
     <!-- Searchbar (currently disabled)
@@ -46,7 +46,7 @@
 </template>
 
 <style>
-  
+
   .navbar-nav > li{
   padding-left:25px;
   padding-right:25px;
@@ -80,3 +80,7 @@
  }
  
 </style>
+
+<script>
+export default{};
+</script>

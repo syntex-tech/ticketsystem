@@ -145,3 +145,7 @@
     </div>
     <!-- End of .container -->
 </template>
+
+<script>
+export default{};
+</script>
