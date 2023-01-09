@@ -17,9 +17,9 @@
               </video>
               <div class="container">
                 <div class="carousel-caption text-border">
-                  <h1>Savor Liberty.</h1>
-                  <p>We offer you an easy path to peace, freedom and happiness - the mountains. Start your journey now.</p>
-                  <p><a class="btn btn-lg btn-primary btn-opac" href="#" role="button">Book your tickets now</a></p>
+                  <h1>Freiheit spüren.</h1>
+                  <p>Wir bieten einen einfachen Weg zu Frieden, Freiheit und Freude - ab in die Berge! Beginne Deine Reise jetzt.</p>
+                  <p><a class="btn btn-lg btn-primary btn-opac" href="#" role="button">Tickets buchen</a></p>
                 </div>
               </div>
             </div>
@@ -32,9 +32,9 @@
               </video>
               <div class="container">
                 <div class="carousel-caption text-border">
-                  <h1 >Explore nature.</h1>
-                  <p>Not sure where to start? Learn more about the region and the many ways to enjoy life.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                  <h1 >Natur erkunden.</h1>
+                  <p>Du weißt nicht, wo Du anfangen sollst? Lerne mehr über die Region und die vielen Möglichkeiten, das Leben zu genießen.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Lerne mehr</a></p>
                 </div>
               </div>
             </div>
@@ -47,9 +47,9 @@
               </video>
               <div class="container">
                 <div class="carousel-caption text-border">
-                  <h1>Enjoy together.</h1>
-                  <p>Vacation time means family time? Don't worry, we got you covered.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Book your family ticket now</a></p>
+                  <h1>Zusammen genießen.</h1>
+                  <p>Urlaub bedeutet Zeit für Familie? Wir haben das Richtige für Dich.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Familienticket buchen</a></p>
                 </div>
               </div>
             </div>
@@ -100,8 +100,8 @@
   
           <div class="row featurette">
             <div class="col-md-7">
-              <h2 class="featurette-heading">Easy Access to the Skies. <span class="text-muted">It'll blow your mind.</span></h2>
-              <p class="lead">Our goal is to use the opportunitites given to us through digitalization. We want to make freedom and peace in the mountains accessible to everyone. Just a few clicks, and you are good to go to start your journey!</p>
+              <h2 class="featurette-heading">Zugang zum Himmel. <span class="text-muted">Zeit für eine Auszeit.</span></h2>
+              <p class="lead">Unser Ziel ist es, die Chancen zu nutzen, die uns die Digitalisierung bietet. Wir wollen Freiheit und Frieden in den Bergen für alle schnell und einfach zugänglich machen. Nur ein paar Klicks trennen Dich von Deiner Reise!</p>
             </div>
             <div class="col-md-3">
               <img class="featurette-image img-fluid mx-auto" src="../assets/images/small icons/cloudy.png" alt="Generic placeholder image">
@@ -112,8 +112,8 @@
   
           <div class="row featurette">
             <div class="col-md-7 order-md-2">
-              <h2 class="featurette-heading">Everything in one app. <span class="text-muted">See for yourself.</span></h2>
-              <p class="lead">Whether you want to book your tickets, find out about your desired region or manage your vacation - we got you. SkyPath concetrates those factors in one single application. No excessive clicking. No confusing interfaces. </p>
+              <h2 class="featurette-heading">Alles aus einer Hand.<span class="text-muted"> Sieh selbst.</span></h2>
+              <p class="lead">Du willst Tickets buchen, Dich über die Region informieren oder Deinen Urlaub verwalten und planen? Wir stehen hinter Dir. SkyPath bündelt genau diese Faktoren in einer einzigen Anwendung. Kein überflüssiges Klicken. Keine verwirrende Benutzeroberfläche. </p>
             </div>
             <div class="col-md-3 order-md-1">
               <img class="featurette-image img-fluid mx-auto" src="../assets/images/small icons/puzzle.png" alt="Generic placeholder image">
@@ -124,8 +124,8 @@
   
           <div class="row featurette">
             <div class="col-md-7">
-              <h2 class="featurette-heading">Start your journey now. <span class="text-muted">Safe and sound.</span></h2>
-              <p class="lead">We value privacy - don't worry about your data. Your tickets belong to you and only to you! We use advanced technology to verify customers and encrypt their data.</p>
+              <h2 class="featurette-heading">Beginne Deine Reise JETZT. <span class="text-muted">Schnell und sicher.</span></h2>
+              <p class="lead">Privatsphäre wird bei uns großgeschrieben - mach Dir keine Sorgen um Deine Daten. Die Tickets und Deine Daten gehören Dir und auch nur Dir! Wir verwenden neuste Technologien, um Kunden zu verifizieren und ihre Daten zu verschlüsseln. </p>
             </div>
             <div class="col-md-3">
               <img class="featurette-image img-fluid mx-auto" src="../assets/images/small icons/shield.png" alt="Generic placeholder image">
