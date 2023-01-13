@@ -1,4 +1,10 @@
 const express = require('express');
+const app = express();
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "http://localhost:5173");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
 const router = express.Router();
 const SkipassTicket = require('../model/SkipassTicket');
 
@@ -23,6 +29,7 @@ router.post('/', async (req,res) => {
         res.json({message: err });
     }
 });
+app.use('/', router);
 
 //Ticket suchen
 
