@@ -24,6 +24,7 @@ router.post('/', async (req,res) => {
         res.json({message: err });
     }
 });
+
 app.use('/', router);
 
 //Ticket suchen
