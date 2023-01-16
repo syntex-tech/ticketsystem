@@ -7,9 +7,13 @@ router.get('/', (req,res) => {
     res.send('Hier kannst du den Skipass kaufen!');
 });
 
+
+
 //Erstellung des SkipassTicket
 router.post('/', async (req,res) => {
+    
     const skipassticket = new SkipassTicket({
+        Email: req.body.Email,
         Vorname: req.body.Vorname,
         Nachname: req.body.Nachname,
         Stadt: req.body.Stadt,
@@ -24,8 +28,6 @@ router.post('/', async (req,res) => {
         res.json({message: err });
     }
 });
-
-app.use('/', router);
 
 //Ticket suchen
 

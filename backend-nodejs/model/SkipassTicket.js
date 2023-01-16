@@ -7,6 +7,12 @@ const TicketSchema = mongoose.Schema({
         type: String,
         default: mongoose.ObjectId,
     },*/
+    Email: {
+        type: String,
+        reuired: true,
+        max: 255,
+        min:3
+    },
     Vorname: {
         type: String,
         required: true,
