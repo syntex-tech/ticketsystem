@@ -44,7 +44,7 @@ export default {
     submitForm() {
       // make an HTTP request to your Node.js backend here,
       // including formData as the data
-      axios.post('http://localhost:3000/', this.formData)
+      axios.post('http://localhost:3000/ticket', this.formData)
       .then(response => {
         console.log(response.data);
       })
