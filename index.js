@@ -1,14 +1,17 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const index = express();
 const bodyParser = require('body-parser');
-index.use((req, res, next) => {
+
+index.use(cors());
+
+/*index.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "http://localhost:5173");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
   });
-
-
+*/
 
 index.use(bodyParser.json());
 
