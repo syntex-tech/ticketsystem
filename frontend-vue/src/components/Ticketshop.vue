@@ -1,6 +1,9 @@
 <template>
     <div class="form-container">
         <form @submit.prevent="submitForm" class="form" ref="form">
+            <label for="E-Mail" class="form-label">E-Mail</label>
+            <input type="email" v-model="formData.Email" id="Email" class="form-input" required />
+
             <label for="Vorname" class="form-label">Vorname</label>
             <input type="text" v-model="formData.Vorname" id="Vorname" class="form-input" required />
 
@@ -33,6 +36,7 @@ export default {
   data() {
     return {
       formData: {
+        Email: '',
         Vorname: '',
         Nachname: '',
         Stadt: '',
@@ -70,24 +74,7 @@ export default {
         console.log(err);
       }
     }
-
   }
-
-  /*
-  methods: {
-    submitForm() {
-      // make an HTTP request to your Node.js backend here,
-      // including formData as the data
-      axios.post('http://localhost:3000/ticket', this.formData)
-      .then(response => {
-        console.log(response.data);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-    }
-  }
-  */
 }
 </script>
 
