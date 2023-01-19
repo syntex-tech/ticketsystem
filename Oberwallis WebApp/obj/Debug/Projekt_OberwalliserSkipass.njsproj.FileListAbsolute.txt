@@ -1,0 +1,6 @@
+C:\Users\lucad\source\repos\Projekt_OberwalliserSkipass\obj\Debug\Projekt_OberwalliserSkipass.njsproj.AssemblyReference.cache
+C:\Users\lucad\source\repos\Projekt_OberwalliserSkipass\obj\Debug\Projekt_OberwalliserSkipass.njsproj.CoreCompileInputs.cache
+C:\Users\lucad\source\repos\Projekt_OberwalliserSkipass\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\lucad\source\repos\Projekt_OberwalliserSkipass - Kopie\obj\Debug\Projekt_OberwalliserSkipass.njsproj.AssemblyReference.cache
+C:\Users\lucad\source\repos\Projekt_OberwalliserSkipass - Kopie\obj\Debug\Projekt_OberwalliserSkipass.njsproj.CoreCompileInputs.cache
+C:\Users\lucad\source\repos\Projekt_OberwalliserSkipass - Kopie\bin\Microsoft.NodejsTools.WebRole.dll

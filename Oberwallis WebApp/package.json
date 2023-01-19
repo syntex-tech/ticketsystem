@@ -1,0 +1,27 @@
+{
+  "name": "projekt_oberwalliser-skipass",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "description": "Projekt_OberwalliserSkipass",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.0",
+    "debug": "^2.2.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.14.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.8.2",
+    "morgan": "^1.7.0",
+    "nodemon": "^2.0.20",
+    "pug": "^2.0.0-beta6",
+    "serve-favicon": "^2.3.0"
+  }
+}
