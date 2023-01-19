@@ -10,6 +10,7 @@ var mongoose = require('mongoose');
 require('dotenv/config');
 
 var routes = require('./routes/index');
+var users = require('./routes/users');
 var registerUser = require('./routes/register');
 var skipassUser = require('./routes/skipass');
 
@@ -36,6 +37,7 @@ mongoose.connect(process.env.DB_CONNECTION, {
 
 
 app.use('/', routes);
+app.use('/users', users);
 app.use('/register', registerUser);
 app.use('/skipass', skipassUser);
 
