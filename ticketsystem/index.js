@@ -13,7 +13,6 @@ index.use(cors());
   });
 */
 
-
 index.use(bodyParser.json());
 
 //Import ROUTES
