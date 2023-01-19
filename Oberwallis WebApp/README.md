@@ -1,3 +1,0 @@
-# Projekt_OberwalliserSkipass
-
-
