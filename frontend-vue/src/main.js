@@ -5,6 +5,7 @@ import Home from './components/Home.vue'
 import About from './components/About.vue'
 import Ticketshop from './components/Ticketshop.vue'
 import Info from './components/Info.vue'
+import Login from './components/Login.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -12,7 +13,8 @@ const router = createRouter({
         {path: '/', name: 'Home', component: Home},
         {path: '/about', name: 'About', component: About},
         {path: '/ticketshop', name: 'Ticketshop', component: Ticketshop},
-        {path: '/info', name: 'Info', component: Info}
+        {path: '/info', name: 'Info', component: Info},
+        {path: '/login', name: 'Login', component: Login}
     ]
 
 })

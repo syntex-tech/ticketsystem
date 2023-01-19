@@ -26,10 +26,10 @@
           Mein Profil
         </a>  
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Login</a>
-          <a class="dropdown-item" href="#">Registrieren</a>
+          <router-link style="text-decoration: none; color: inherit;" to="/login"><a class="dropdown-item">Login</a></router-link>
+          <a class="dropdown-item">Registrieren</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item">Something else here</a>
         </div>
       </li>
     </ul>
