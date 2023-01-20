@@ -1,14 +1,19 @@
+
 <template>
-  <h1>Lege jetzt los.</h1>
-  <form>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    <br>
-    <label for="password">Passwort:</label>
-    <input type="password" id="password" name="password" required>
-    <br>
-    <button type="submit">Login</button>
-  </form>
+  <div class="container-box">
+    <div class="login-box">
+      <h1>Lege jetzt los.</h1>
+      <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="password">Passwort:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -18,7 +23,21 @@
 </script>
 
 <style>
+.container-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65vh; /* Or any value that works for you */
+}
 
+.login-box {
+  border: 2px solid gray;
+  border-radius: 10px;
+  background-color: #e2e2e2;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px #ccc;
+  width: 500px; /* Or any value that works for you*/
+}
 h1 {
   text-align: center;
   font-size: 2em;
