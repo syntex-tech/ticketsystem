@@ -10,7 +10,7 @@
         <!-- Section: Social media -->
         <section
                 class="d-flex justify-content-between p-4"
-                style="background-color: #6351ce"
+                style="background-color: rgba(0, 0, 0, 0.2)"
                 >
             <!-- Left -->
             <div class="me-5">
@@ -54,7 +54,7 @@
                 <h6 class="text-uppercase fw-bold">SkyPath</h6>
                 <hr
                     class="mb-4 mt-0 d-inline-block mx-auto"
-                    style="width: 60px; background-color: #7c4dff; height: 2px"
+                    style="width: 60px; background-color: lightblue; height: 2px"
                     />
                 <p>
                     Start your journey now with SkyPath!
@@ -68,7 +68,7 @@
                 <h6 class="text-uppercase fw-bold">Test123</h6>
                 <hr
                     class="mb-4 mt-0 d-inline-block mx-auto"
-                    style="width: 60px; background-color: #7c4dff; height: 2px"
+                    style="width: 60px; background-color: lightblue; height: 2px"
                     />
                 <p>
                     <a href="#!" class="text-white">Ticketshop</a>
@@ -91,7 +91,7 @@
                 <h6 class="text-uppercase fw-bold">Test123</h6>
                 <hr
                     class="mb-4 mt-0 d-inline-block mx-auto"
-                    style="width: 60px; background-color: #7c4dff; height: 2px"
+                    style="width: 60px; background-color: lightblue; height: 2px"
                     />
                 <p>
                     <a href="#!" class="text-white">Your Account</a>
@@ -114,7 +114,7 @@
                 <h6 class="text-uppercase fw-bold">Contact</h6>
                 <hr
                     class="mb-4 mt-0 d-inline-block mx-auto"
-                    style="width: 60px; background-color: #7c4dff; height: 2px"
+                    style="width: 60px; background-color: lightblue; height: 2px"
                     />
                 <p><i class="fas fa-home mr-3"></i> DHBW Mosbach </p>
                 <p><i class="fas fa-envelope mr-3"></i> info@AlpTicket.de</p>
