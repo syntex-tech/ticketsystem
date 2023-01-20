@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 const router = express.Router();
 const SkipassTicket = require('../model/SkipassTicket');
-const nodemailer = require('nodemailer')
+const nodemailer = require('nodemailer');
+const { default: mongoose } = require('mongoose');
 
 router.get('/', (req,res) => {
     res.send('Hier kannst du den Skipass kaufen!');
@@ -18,7 +19,8 @@ router.post('/', async (req,res) => {
         Stadt: req.body.Stadt,
         Postleitzahl: req.body.Postleitzahl,
         Strasse: req.body.Strasse,
-        Hausnummer: req.body.Hausnummer
+        Hausnummer: req.body.Hausnummer,
+        id: mongoose.Types.ObjectId
     });
     try{
         const savedSkipassTicket = await skipassticket.save();
@@ -26,6 +28,8 @@ router.post('/', async (req,res) => {
     } catch(err){
         res.json({message: err });
     }
+
+
 
     sendEmail()
     .then(response => res.send(response.message))
@@ -47,7 +51,9 @@ router.post('/', async (req,res) => {
         to: skipassticket.Email,
         subject:'Ihre Bestellung wurde verarbeitet!',
         text: "Du hast den Skipass Oberwallis gekauft! Folgende Daten werden gespeichert. " + 
-        "Email: " + skipassticket.Email +  " Name: " + skipassticket.Vorname + " " + skipassticket.Nachname + " Straße: " + skipassticket.Strasse + " " + skipassticket.Hausnummer + " Stadt: " + skipassticket.Postleitzahl + " " + skipassticket.Stadt,       
+        "Email: " + skipassticket.Email +  " Name: " + skipassticket.Vorname + " " 
+        + skipassticket.Nachname + " Straße: " + skipassticket.Strasse + " " + skipassticket.Hausnummer 
+        + " Stadt: " + skipassticket.Postleitzahl + " " + skipassticket.Stadt + " Ticketnummer: " + skipassticket.id,
                        
     }
     transporter.sendMail(mail_configs, function(error, info){
