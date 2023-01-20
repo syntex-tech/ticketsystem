@@ -18,7 +18,9 @@ index.use(bodyParser.json());
 //Import ROUTES
 
 const ticketRoute = require('./backend-nodejs/routes/ticket');
+const ZermatterBergbahnRoute = require ('./backend-nodejs/routes/ZermatterBergbahn')
 
+index.use('/ZermatterBergbahn', ZermatterBergbahnRoute)
 index.use('/ticket', ticketRoute)
 
 //ROUTES
@@ -26,6 +28,7 @@ index.use('/ticket', ticketRoute)
 index.get('/', (req,res) => {
     res.send('We are on home');
 });
+
 
 
 //Connect to DB
@@ -36,29 +39,3 @@ mongoose.connect('mongodb+srv://Oberwallis:admin@cluster0np.emsr4vh.mongodb.net/
 
 index.listen(3000);
 
-/*Email senden
-let client = require ('@sendgrid/mail')
-
-client.setApiKey(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)
-
-client.send({
-  to: {
-    email: Email,
-    Vorname: Vorname,
-    Nachname: Nachname
-  },
-  from: {
-    email: 'SkipassOberwallis@web.de',
-    name: SkipassOberwallis
-  },
-  templateId: 'd-565d4d016cb840528edc7e24d82747e6',
-  dynamicTemplateData: {
-    Vorname: Vorname,
-    Nachname: Nachname
-  },
-})
-.then (() => {
-  console.log("Email was sent");
-});
-
-*/
