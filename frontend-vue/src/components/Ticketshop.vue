@@ -1,4 +1,40 @@
 <template>
+<main role="main">
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-3">Ticketshop</h1>
+    <p>Wir bieten Dir drei verschiedene Ticketkategorien an. Wähle das passende für Dich aus und klicke einfach auf "Buchen"! Du wirst automatisch weitergeleitet.</p>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-4">
+      <h2>SOLO</h2>
+      <p>Für abenteuerlustige, tapfere und willensstarke Alleingänger. Eine Verschnaufpause ganz mit sich selbst - das muss auch mal sein. Wir haben das Richtige für Dich!</p>
+      <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>COMBO</h2>
+      <p>Doppelt hält besser - wir haben genau das Richtige für euch! </p>
+      <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>FAMILY</h2>
+      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+    </div>
+  </div>
+
+  <hr>
+
+</div> <!-- /container -->
+
+</main>
+
     <div class="form-container">
         <form @submit.prevent="submitForm" class="form" ref="form">
             <label for="E-Mail" class="form-label">E-Mail</label>
@@ -28,7 +64,7 @@
         <div v-if="submitted" class="success-hint">Dein Ticket wurde erstellt!</div>
     </div>
 </template>
-    
+
 <script>
 import axios from 'axios';
 
@@ -79,6 +115,10 @@ export default {
 </script>
 
 <style>
+.jumbotron {
+
+}
+
 .success-hint {
   color: green;
   font-size: 1.2em;
