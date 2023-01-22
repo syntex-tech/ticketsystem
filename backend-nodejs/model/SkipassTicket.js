@@ -2,11 +2,10 @@ const mongoose = require('mongoose');
 
 
 const TicketSchema = mongoose.Schema({
-    
-    /*Ticketnummer: {
-        type: String,
-        default: mongoose.ObjectId,
-    },*/
+
+    ids: {
+        default: mongoose.Types.ObjectId
+    },
     Email: {
         type: String,
         reuired: true,
@@ -30,7 +29,7 @@ const TicketSchema = mongoose.Schema({
         default: Date.now
     },
     AnzahlZutritteZermatterBergbahnen: {
-        type: String,
+        type: Number,
         default: 5
     },
     Stadt: {

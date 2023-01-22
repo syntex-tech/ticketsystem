@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const index = express();
 const bodyParser = require('body-parser');
+require('dotenv/config');
 
 index.use(cors());
 
@@ -18,8 +19,14 @@ index.use(bodyParser.json());
 //Import ROUTES
 
 const ticketRoute = require('./backend-nodejs/routes/ticket');
+const ZermatterBergbahnRoute = require('./backend-nodejs/routes/ZermatterBergbahn');
+const userRoute = require('./backend-nodejs/routes/register');
+const adminRoute = require('./backend-nodejs/routes/admin');
 
-index.use('/ticket', ticketRoute)
+index.use('/ZermatterBergbahn', ZermatterBergbahnRoute);
+index.use('/ticket', ticketRoute);
+index.use('/register', userRoute);
+index.use('/admin', adminRoute);
 
 //ROUTES
 
@@ -28,37 +35,41 @@ index.get('/', (req,res) => {
 });
 
 
+
 //Connect to DB
 
 mongoose.set('strictQuery', true);
-mongoose.connect('mongodb+srv://Oberwallis:admin@cluster0np.emsr4vh.mongodb.net/?retryWrites=true&w=majority', () => console.log('Connected to DB!'));
+mongoose.connect(process.env.DB_CONNECTION, () => console.log('Connected to DB!'));
 
 
 index.listen(3000);
 
-/*Email senden
-let client = require ('@sendgrid/mail')
-
-client.setApiKey(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)
-
-client.send({
-  to: {
-    email: Email,
-    Vorname: Vorname,
-    Nachname: Nachname
-  },
-  from: {
-    email: 'SkipassOberwallis@web.de',
-    name: SkipassOberwallis
-  },
-  templateId: 'd-565d4d016cb840528edc7e24d82747e6',
-  dynamicTemplateData: {
-    Vorname: Vorname,
-    Nachname: Nachname
-  },
-})
-.then (() => {
-  console.log("Email was sent");
+// Error Handler
+// catch 404 and forward to error handler
+index.use(function (req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
 });
 
-*/
+// development error handler
+// will print stacktrace
+if (index.get('env') === 'development') {
+    index.use(function (err, req, res, next) {
+        res.status(err.status || 500);
+        res.render('error', {
+            message: err.message,
+            error: err
+        });
+    });
+}
+
+// production error handler
+// no stacktraces leaked to user
+index.use(function (err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+        message: err.message,
+        error: {}
+    });
+});
