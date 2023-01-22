@@ -35,7 +35,10 @@ router.post('/', async (req,res) => {
     .then(response => res.send(response.message))
     .catch(error => res.status(500).send(error.message))
 
-    function sendEmail(){
+    
+});
+
+function sendEmail(){
 
     return new Promise((resolve, reject) => {
         var transporter = nodemailer.createTransport({
@@ -65,9 +68,6 @@ router.post('/', async (req,res) => {
     })
     })
   }
-});
-
-
 
 //Ticket suchen
 
