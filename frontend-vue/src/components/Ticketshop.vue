@@ -115,9 +115,7 @@ export default {
 </script>
 
 <style>
-.jumbotron {
 
-}
 
 .success-hint {
   color: green;
