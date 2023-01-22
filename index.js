@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const index = express();
 const bodyParser = require('body-parser');
+require('dotenv/config');
 
 index.use(cors());
 
@@ -18,10 +19,14 @@ index.use(bodyParser.json());
 //Import ROUTES
 
 const ticketRoute = require('./backend-nodejs/routes/ticket');
-const ZermatterBergbahnRoute = require ('./backend-nodejs/routes/ZermatterBergbahn')
+const ZermatterBergbahnRoute = require('./backend-nodejs/routes/ZermatterBergbahn');
+const userRoute = require('./backend-nodejs/routes/register');
+const adminRoute = require('./backend-nodejs/routes/admin');
 
-index.use('/ZermatterBergbahn', ZermatterBergbahnRoute)
-index.use('/ticket', ticketRoute)
+index.use('/ZermatterBergbahn', ZermatterBergbahnRoute);
+index.use('/ticket', ticketRoute);
+index.use('/register', userRoute);
+index.use('/admin', adminRoute);
 
 //ROUTES
 
@@ -34,8 +39,7 @@ index.get('/', (req,res) => {
 //Connect to DB
 
 mongoose.set('strictQuery', true);
-mongoose.connect('mongodb+srv://Oberwallis:admin@cluster0np.emsr4vh.mongodb.net/?retryWrites=true&w=majority', () => console.log('Connected to DB!'));
+mongoose.connect(process.env.DB_CONNECTION, () => console.log('Connected to DB!'));
 
 
 index.listen(3000);
-
