@@ -41,12 +41,11 @@ router.post("/loginAdmin", async (req, res) => {
 
         const token = jwt.sign({ _id: admin._id, email: admin.email }, process.env.SECRET);
 
-        res.send('Sie sind eingeloggt', token);
+        res.send('Sie sind eingeloggt! Token: ' + token);
 
     } catch (err) {
         res.status(400).send(err);
     }
 });
-
 
 module.exports = router;
