@@ -89,7 +89,7 @@ export default {
   },
 
   methods: {
-    submitForm() {
+    /*submitForm() {
       // make an HTTP request to your Node.js backend here,
       // including formData as the data
       axios.post('http://localhost:3000/ticket', this.formData)
@@ -100,11 +100,14 @@ export default {
         console.log(error);
       });
     },
-
+    */
     async handleSubmit(event) {
       event.preventDefault();
       try {
-        await axios.post('http://localhost:3000/ticket', this.formData);
+        await axios.post('http://localhost:3000/ticket', this.formData)
+        .then(response => {
+          console.log(response.data);
+        })
         this.submitted = true;
       } catch (err) {
         console.log(err);
