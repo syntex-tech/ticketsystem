@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
     
     //Checking if the id exist
     const AnzahlZutritteZermatterBergbahnen = await SkipassTicket.findOne({
-        _id: req.body.ids,
+        _id: req.body.id_,
     });
     if(!SkipassTicket) {
         res.status(400);
@@ -25,9 +25,9 @@ router.post('/', async (req, res) => {
         });
     }
     //if statement muss noch gemacht werden Die Zahl 5 wird noch nicht erkannt und das System denkt, dass es kleiner ist als 0
-    if(AnzahlZutritteZermatterBergbahnen > 0) {
+    if( 1> 0) {
     const AnzahlZutritteZermatterBergbahnen2 = await SkipassTicket.findOneAndUpdate({
-        _id: req.body.ids,
+        _id: req.body.id_,
     },
     {
         $inc: {AnzahlZutritteZermatterBergbahnen: -1}
