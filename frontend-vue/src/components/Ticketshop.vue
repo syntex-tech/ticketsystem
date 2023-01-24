@@ -52,7 +52,7 @@
             <label for="Postleitzahl" class="form-label">Postleitzahl</label>
             <input type="text" v-model="formData.Postleitzahl" id="Postleitzahl" class="form-input" required />
 
-            <label for="Strasse" class="form-label">Strasse</label>
+            <label for="Strasse" class="form-label">Straße</label>
             <input type="text" v-model="formData.Strasse" id="Strasse" class="form-input" required />
 
             <label for="Hausnummer" class="form-label">Hausnummer</label>

@@ -1,0 +1,111 @@
+<template>
+    <div class="form-container">
+        <form @submit.prevent="submitForm" class="form" ref="form">
+            <label for="E-Mail" class="form-label">E-Mail</label>
+            <input type="email" v-model="formData.email" id="Email" class="form-input" required />
+
+            <label for="Passwort" class="form-label">Passwort</label>
+            <input type="text" v-model="formData.password" id="Email" class="form-input" required />
+
+            <label for="Vorname" class="form-label">Vorname</label>
+            <input type="text" v-model="formData.Vorname" id="Vorname" class="form-input" required />
+
+            <label for="Nachname" class="form-label">Nachname</label>
+            <input type="text" v-model="formData.Nachname" id="Nachname" class="form-input" required />
+
+            <label for="Stadt" class="form-label">Stadt</label>
+            <input type="text" v-model="formData.Stadt" id="Stadt" class="form-input" required />
+
+            <label for="Postleitzahl" class="form-label">Postleitzahl</label>
+            <input type="text" v-model="formData.Postleitzahl" id="Postleitzahl" class="form-input" required />
+
+            <label for="Strasse" class="form-label">Straße</label>
+            <input type="text" v-model="formData.Strasse" id="Strasse" class="form-input" required />
+
+            <label for="Hausnummer" class="form-label">Hausnummer</label>
+            <input type="text" v-model="formData.Hausnummer" id="Hausnummer" class="form-input" required />
+
+            <button type="submit" class="form-submit-btn">Registrieren</button>
+        </form>
+        <div v-if="error" class="error-hint">{{ error }}</div>
+        <div v-if="submitted" class="success-hint">Erfolgreich registriert!</div>
+    </div>
+</template>
+  
+<script>
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      formData: {
+        email: '',
+        password: '',
+        Vorname: '',
+        Nachname: '',
+        Stadt: '',
+        Postleitzahl: '',
+        Strasse: '',
+        Hausnummer: '',
+      },
+      submitted: false
+    }
+  },
+
+  mounted(){
+    this.$refs.form.addEventListener('submit', this.handleSubmit);
+  },
+
+  methods: {
+    async handleSubmit(event) {
+      event.preventDefault();
+      try {
+        await axios.post('http://localhost:3000/registerUser', this.formData)
+        .then(response => {
+          console.log(response.data);
+        })
+        this.submitted = true;
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  }
+}
+</script>
+  
+<style>
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.form-signin input[type="text"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+</style>

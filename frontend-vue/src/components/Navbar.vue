@@ -27,7 +27,7 @@
         </a>  
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <router-link style="text-decoration: none; color: inherit;" to="/login"><a class="dropdown-item">Login</a></router-link>
-          <a class="dropdown-item">Registrieren</a>
+          <router-link style="text-decoration: none; color: inherit;" to="/register"><a class="dropdown-item">Registrieren</a></router-link>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item">Something else here</a>
         </div>

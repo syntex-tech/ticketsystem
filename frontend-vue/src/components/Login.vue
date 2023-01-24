@@ -1,33 +1,48 @@
-
 <template>
-  <div class="parent-container">
-    <div class="container-box">
-      <div class="login-box">
-        <div class="logologin">
-          <img src="../assets/images/small icons/logotest2.png" alt="Logo">
-        </div>
-        <h1>Lege jetzt los.</h1>
-        <form>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          <br>
-          <label for="password">Passwort:</label>
-          <input type="password" id="password" name="password" required>
-          <br>
-          <button type="submit">Login</button>
-        </form>
-        <div class="form-group">
-          <button class=" forgot-password forgot-password-button">Passwort vergessen?</button>
-        </div>
+  <form class="form-signin" @submit.prevent="submitLoginForm">
+      <img class="mb-4" src="../assets/images/small icons/logotest2.png" alt="" width="90" height="90">
+      <h1 class="h3 mb-3 font-weight-normal">Logge Dich ein!</h1>
+
+      <label for="inputEmail" class="sr-only">E-Mail</label>
+      <input type="email" id="inputEmail" v-model="formData.email" class="form-control" placeholder="E-Mail" required autofocus>
+
+      <label for="inputPassword" class="sr-only">Passwort</label>
+      <input type="password" id="inputPassword" v-model="formData.password" class="form-control" placeholder="Passwort" required>
+
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
       </div>
-    </div>
-  </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2023: Oberwallis</p>
+  </form>
 </template>
 
 <script>
-    export default{
-
+import axios from 'axios';
+  export default{
+    data() {
+      return {
+        formData: {
+          email: '',
+          password: '',
+        }
+      }
+    },
+    methods: {
+      submitLoginForm() {
+        //HTTP request to backend
+        axios.post('http://localhost:3000/login', this.formData)
+        .then(response => {
+          console.log(response.data);
+        })
+        .catch(error => {
+          console.log(error);
+        })
+      }
     }
+  }
 </script>
 
 <style>
