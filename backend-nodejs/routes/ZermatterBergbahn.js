@@ -3,6 +3,7 @@ const app = express();
 const router = express.Router();
 const SkipassTicket = require('../model/SkipassTicket');
 const { default: mongoose } = require('mongoose');
+const bodyParser = require('body-parser');
 
 
 router.get('/', (req,res) => {
@@ -15,8 +16,8 @@ router.post('/', async (req, res) => {
     res.type('json');  
     
     //Checking if the id exist
-   const AnzahlZutritteZermatterBergbahnen = await SkipassTicket.findOne({
-        _id: req.body._id
+   const AnzahlZutritte = await SkipassTicket.findOne({
+        _id: req.body.id_,
     }
     );
     if(!SkipassTicket) {
@@ -27,7 +28,7 @@ router.post('/', async (req, res) => {
     }
     //if statement muss noch gemacht werden Die Zahl 5 wird noch nicht erkannt und das System denkt, dass es kleiner ist als 
 
-    if( doc.AnzahlZutritteZermatterBergbahnen > 0) {
+   if( AnzahlZutritte.AnzahlZutritteZermatterBergbahnen > 0) {
     const AnzahlZutritteZermatterBergbahnen2 = await SkipassTicket.findOneAndUpdate({
         _id: req.body.id_,
     },
@@ -42,6 +43,7 @@ router.post('/', async (req, res) => {
         message: "Sie haben bereits alle 5 Zutritte der Bergbahn verbraucht!"
     })
   }
+
 });
 
 module.exports = router;
