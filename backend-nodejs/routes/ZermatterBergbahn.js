@@ -15,17 +15,19 @@ router.post('/', async (req, res) => {
     res.type('json');  
     
     //Checking if the id exist
-    const AnzahlZutritteZermatterBergbahnen = await SkipassTicket.findOne({
-        _id: req.body.id_,
-    });
+   const AnzahlZutritteZermatterBergbahnen = await SkipassTicket.findOne({
+        _id: req.body._id
+    }
+    );
     if(!SkipassTicket) {
         res.status(400);
         return res.send({
             message: 'Ticket not found'
         });
     }
-    //if statement muss noch gemacht werden Die Zahl 5 wird noch nicht erkannt und das System denkt, dass es kleiner ist als 0
-    if( 1> 0) {
+    //if statement muss noch gemacht werden Die Zahl 5 wird noch nicht erkannt und das System denkt, dass es kleiner ist als 
+
+    if( doc.AnzahlZutritteZermatterBergbahnen > 0) {
     const AnzahlZutritteZermatterBergbahnen2 = await SkipassTicket.findOneAndUpdate({
         _id: req.body.id_,
     },

@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const TicketSchema = mongoose.Schema({
 
     ids: {
-        default: mongoose.Types.ObjectId
+       default: mongoose.Types.ObjectId
     },
     Email: {
         type: String,
