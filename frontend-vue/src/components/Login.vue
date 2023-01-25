@@ -1,5 +1,5 @@
 <template>
-  <form class="form-signin" @submit.prevent="submitLoginForm">
+  <form class="form-signin" @submit.prevent="submitForm" ref="form">
       <img class="mb-4" src="../assets/images/small icons/logotest2.png" alt="" width="90" height="90">
       <h1 class="h3 mb-3 font-weight-normal">Logge Dich ein!</h1>
 
@@ -15,34 +15,52 @@
         </label>
       </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <div v-if="submitted" class="success-hint">Erfolgreich registriert!</div>
+      <div v-if="error" class="error-hint">{{ error }}</div>
       <p class="mt-5 mb-3 text-muted">&copy; 2023: Oberwallis</p>
   </form>
 </template>
 
 <script>
 import axios from 'axios';
-  export default{
-    data() {
-      return {
-        formData: {
-          email: '',
-          password: '',
-        }
-      }
-    },
-    methods: {
-      submitLoginForm() {
-        //HTTP request to backend
-        axios.post('http://localhost:3000/login', this.formData)
+
+export default {
+  data() {
+    return {
+      formData: {
+        email: '',
+        password: '',
+        error: ''
+      },
+      submitted: false,
+      error: false
+    }
+  },
+
+  mounted(){
+    this.$refs.form.addEventListener('submit', this.handleSubmit);
+  },
+
+  methods: {
+    async handleSubmit(event) {
+      event.preventDefault();
+      try {
+        await axios.post('http://localhost:3000/register/login', this.formData)
         .then(response => {
-          console.log(response.data);
+          if(response.data === "Diese E-Mail exisitiert nicht"){
+           this.error = response.data;
+          }else if(response.data === "Das Passwort ist falsch"){
+           this.error = response.data;
+          }else{
+           this.submitted = true;
+          }
         })
-        .catch(error => {
-          console.log(error);
-        })
+      } catch (err) {
+        console.log(err);
       }
     }
   }
+}
 </script>
 
 <style>

@@ -62,7 +62,7 @@ export default {
   methods: {
     async handleSubmit(event) {
       event.preventDefault();
-      try {
+      try {+
         await axios.post('http://localhost:3000/register/registerUser', this.formData)
         .then(response => {
           if(response.data === "Diese E-Mail exisitiert bereits!"){
@@ -80,7 +80,7 @@ export default {
 }
 </script>
   
-<style>
+<style scoped>
 .form-signin {
   width: 100%;
   max-width: 330px;
