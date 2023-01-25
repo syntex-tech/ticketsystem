@@ -13,21 +13,22 @@ router.get('/', function (req, res) {
 });
 
 
-router.post("/registerUser", async (req, res) => {
+router.post('/registerUser', async (req, res) => {
     const user = new User({
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 10)
     });
     user.save()
         .then(() => {
-            res.send('Die Registrierung war erfolgreich');
+            res.send('Die Registrierung war erfolgreich!');
         })
         .catch(err => {
             if (err.code === 11000) {
-                res.send('Diese E-Mail exisitiert bereits');
+                res.send('Diese E-Mail exisitiert bereits!');
             }
         });
 });
+
 
 router.post("/login", async (req, res) => {
     try {

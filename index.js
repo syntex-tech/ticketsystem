@@ -5,6 +5,7 @@ const index = express();
 const bodyParser = require('body-parser');
 require('dotenv/config');
 
+
 index.use(cors());
 
 /*index.use((req, res, next) => {
@@ -43,6 +44,7 @@ mongoose.connect(process.env.DB_CONNECTION, () => console.log('Connected to DB!'
 
 
 index.listen(3000);
+
 
 // Error Handler
 // catch 404 and forward to error handler
