@@ -7,6 +7,7 @@ import Ticketshop from './components/Ticketshop.vue'
 import Info from './components/Info.vue'
 import Login from './components/Login.vue'
 import Register from './components/Register.vue'
+import ZermatterBergbahn from './components/ZermatterBergbahn.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -16,7 +17,9 @@ const router = createRouter({
         {path: '/ticketshop', name: 'Ticketshop', component: Ticketshop},
         {path: '/info', name: 'Info', component: Info},
         {path: '/login', name: 'Login', component: Login},
-        {path: '/register', name: 'Register', component: Register}
+        {path: '/register', name: 'Register', component: Register},
+        {path: '/zermatterbergbahn', name: 'ZermatterBergbahn', component: ZermatterBergbahn}
+        
     ]
 
 })

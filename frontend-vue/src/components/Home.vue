@@ -19,7 +19,7 @@
                 <div class="carousel-caption text-border">
                   <h1>Freiheit spüren.</h1>
                   <p>Wir bieten einen einfachen Weg zu Frieden, Freiheit und Freude - ab in die Berge! Beginne Deine Reise jetzt.</p>
-                  <p><a class="btn btn-lg btn-primary btn-opac" href="#" role="button">Tickets buchen</a></p>
+                  <p><router-link style="text-decoration: none; color: inherit;" to="/ticketshop"><a class="btn btn-lg btn-primary btn-opac" href="#" role="button">Tickets buchen</a></router-link></p>
                 </div>
               </div>
             </div>
@@ -49,7 +49,7 @@
                 <div class="carousel-caption text-border">
                   <h1>Zusammen genießen.</h1>
                   <p>Urlaub bedeutet Zeit für Familie? Wir haben das Richtige für Dich.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Familienticket buchen</a></p>
+                  <p><router-link style="text-decoration: none; color: inherit;" to="/ticketshop"><a class="btn btn-lg btn-primary" href="#" role="button">Familienticket buchen</a></router-link></p>
                 </div>
               </div>
             </div>

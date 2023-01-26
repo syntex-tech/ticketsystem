@@ -15,7 +15,7 @@
         </label>
       </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      <div v-if="submitted" class="success-hint">Erfolgreich registriert!</div>
+      <div v-if="submitted" class="success-hint">Erfolgreich eingeloggt!</div>
       <div v-if="error" class="error-hint">{{ error }}</div>
       <p class="mt-5 mb-3 text-muted">&copy; 2023: Oberwallis</p>
   </form>

@@ -19,6 +19,9 @@
       <li class="nav-item">
         <router-link style="text-decoration: none; color: inherit;" to="/ticketshop"><a class="nav-link" href="#">Ticketshop </a></router-link>
       </li>
+      <li class="nav-item">
+        <router-link style="text-decoration: none; color: inherit;" to="/zermatterbergbahn"><a class="nav-link" href="#">Zermatter Bergbahn </a></router-link>
+      </li>
     </ul>  
     <ul class="navbar-nav me-auto"> 
       <li class="nav-item dropdown">
