@@ -1,8 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const index = express();
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const index = express();
 require('dotenv/config');
 
 
@@ -18,16 +19,20 @@ index.use(cors());
 index.use(bodyParser.json());
 
 //Import ROUTES
-
 const ticketRoute = require('./backend-nodejs/routes/ticket');
 const ZermatterBergbahnRoute = require('./backend-nodejs/routes/ZermatterBergbahn');
 const userRoute = require('./backend-nodejs/routes/register');
 const adminRoute = require('./backend-nodejs/routes/admin');
+const auth = require("./backend-nodejs/routes/validateToken");
+const profil = require("./backend-nodejs/routes/profil");
 
+index.use(cookieParser());
 index.use('/ZermatterBergbahn', ZermatterBergbahnRoute);
 index.use('/ticket', ticketRoute);
 index.use('/register', userRoute);
 index.use('/admin', adminRoute);
+index.use('/validateToken', auth);
+index.use('/profil', profil);
 
 //ROUTES
 
@@ -41,9 +46,6 @@ index.get('/', (req,res) => {
 
 mongoose.set('strictQuery', true);
 mongoose.connect(process.env.DB_CONNECTION, () => console.log('Connected to DB!'));
-
-
-index.listen(3000);
 
 
 // Error Handler
@@ -75,3 +77,6 @@ index.use(function (err, req, res, next) {
         error: {}
     });
 });
+
+
+index.listen(process.env.PORT);
