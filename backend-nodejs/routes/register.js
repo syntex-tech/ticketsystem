@@ -27,7 +27,7 @@ router.post('/registerUser', async (req, res) => {
     });
     user.save()
         .then(() => {
-            res.send('Die Registrierung war erfolgreich!' + token);
+            res.send('Die Registrierung war erfolgreich!');
         })
         .catch(err => {
             if (err.code === 11000) {

@@ -1,14 +1,16 @@
 const mongoose = require('mongoose');
 
-const regSchema = mongoose.Schema({
-    email: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    password: {
+
+const ticketSchema = mongoose.Schema({
+    userId: {
         type: String,
         required: true
+    },
+    Email: {
+        type: String,
+        reuired: true,
+        max: 255,
+        min: 3
     },
     Vorname: {
         type: String,
@@ -21,6 +23,14 @@ const regSchema = mongoose.Schema({
         required: true,
         max: 255,
         min: 1
+    },
+    Datum: {
+        type: Date,
+        default: Date.now
+    },
+    AnzahlZutritteZermatterBergbahnen: {
+        type: Number,
+        default: 5
     },
     Stadt: {
         type: String,
@@ -46,12 +56,6 @@ const regSchema = mongoose.Schema({
         max: 255,
         min: 1
     },
-    Datum: {
-        type: Date,
-        default: Date.now
-    }
+})
 
-});
-
-
-module.exports = mongoose.model('Userlist', regSchema);
+module.exports = mongoose.model('ticket', ticketSchema);

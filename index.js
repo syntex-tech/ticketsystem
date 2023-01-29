@@ -22,17 +22,20 @@ index.use(bodyParser.json());
 const ticketRoute = require('./backend-nodejs/routes/ticket');
 const ZermatterBergbahnRoute = require('./backend-nodejs/routes/ZermatterBergbahn');
 const userRoute = require('./backend-nodejs/routes/register');
-const adminRoute = require('./backend-nodejs/routes/admin');
 const auth = require("./backend-nodejs/routes/validateToken");
 const profil = require("./backend-nodejs/routes/profil");
+const ticket = require("./backend-nodejs/routes/tickets");
+const qr = require("./backend-nodejs/routes/qrcode");
+
 
 index.use(cookieParser());
 index.use('/ZermatterBergbahn', ZermatterBergbahnRoute);
 index.use('/ticket', ticketRoute);
 index.use('/register', userRoute);
-index.use('/admin', adminRoute);
 index.use('/validateToken', auth);
 index.use('/profil', profil);
+index.use('/tickets', ticket);
+index.use('/qrcode', qr);
 
 //ROUTES
 
