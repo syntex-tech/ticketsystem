@@ -25,7 +25,6 @@ const userRoute = require('./backend-nodejs/routes/register');
 const auth = require("./backend-nodejs/routes/validateToken");
 const profil = require("./backend-nodejs/routes/profil");
 const ticket = require("./backend-nodejs/routes/tickets");
-const qr = require("./backend-nodejs/routes/qrcode");
 
 
 index.use(cookieParser());
@@ -35,7 +34,6 @@ index.use('/register', userRoute);
 index.use('/validateToken', auth);
 index.use('/profil', profil);
 index.use('/tickets', ticket);
-index.use('/qrcode', qr);
 
 //ROUTES
 

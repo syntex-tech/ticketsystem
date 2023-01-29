@@ -48,4 +48,12 @@ router.post("/loginAdmin", async (req, res) => {
     }
 });
 
+router.get('/admin-only', auth, async (req, res) => {
+    if (!req.userData.isAdmin) {
+        return res.status(403).send({ error: "Forbidden" });
+    }
+    // Admin-only logic here
+    res.send("Welcome, Admin!")
+});
+
 module.exports = router;

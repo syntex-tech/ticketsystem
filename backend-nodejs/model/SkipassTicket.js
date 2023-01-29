@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 
 
 const TicketSchema = mongoose.Schema({
-
-    ids: {
-       default: mongoose.Types.ObjectId
+    userId: {
+        type: String,
+        required: true
     },
     Email: {
         type: String,
