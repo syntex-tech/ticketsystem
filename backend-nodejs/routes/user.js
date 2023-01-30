@@ -1,11 +1,10 @@
 const express = require('express');
-const router = express.Router();
-const User = require('../model/userreg');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const auth = require("../routes/validateToken");
+const User = require('../model/userreg');
 require('dotenv').config();
-
+const router = express.Router();
 
 
 /* GET users listing. */
@@ -23,7 +22,7 @@ router.post('/registerUser', async (req, res) => {
         Stadt: req.body.Stadt,
         Postleitzahl: req.body.Postleitzahl,
         Strasse: req.body.Strasse,
-        Hausnummer: req.body.Hausnummer
+        Hausnummer: req.body.Hausnummer,
     });
     user.save()
         .then(() => {
@@ -79,7 +78,7 @@ router.get('/profilAnzeigen', auth, async (req, res) => {
 
 router.post("/logout", auth, (req, res) => {
     res.clearCookie("token");
-    res.send("You are logged out");
+    res.send("Sie wurden ausgeloggt!");
 });
 
 module.exports = router;

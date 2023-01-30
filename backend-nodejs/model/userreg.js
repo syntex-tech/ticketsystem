@@ -49,6 +49,11 @@ const regSchema = mongoose.Schema({
     Datum: {
         type: Date,
         default: Date.now
+    },
+    isAdmin: {
+        type: Boolean,
+        default: false,
+        required: true
     }
 
 });

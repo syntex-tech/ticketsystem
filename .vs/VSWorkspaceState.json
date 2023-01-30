@@ -5,6 +5,6 @@
     "\\backend-nodejs\\model",
     "\\backend-nodejs\\routes"
   ],
-  "SelectedNode": "\\backend-nodejs\\routes\\validateToken.js",
+  "SelectedNode": "\\backend-nodejs\\routes\\validateAdmin.js",
   "PreviewInSolutionExplorer": false
 }
