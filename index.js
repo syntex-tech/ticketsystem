@@ -21,18 +21,16 @@ index.use(bodyParser.json());
 //Import ROUTES
 const ticketRoute = require('./backend-nodejs/routes/ticket');
 const ZermatterBergbahnRoute = require('./backend-nodejs/routes/ZermatterBergbahn');
-const userRoute = require('./backend-nodejs/routes/register');
+const userRoute = require('./backend-nodejs/routes/user');
 const auth = require("./backend-nodejs/routes/validateToken");
-const profil = require("./backend-nodejs/routes/profil");
 const ticket = require("./backend-nodejs/routes/tickets");
 
 
 index.use(cookieParser());
 index.use('/ZermatterBergbahn', ZermatterBergbahnRoute);
 index.use('/ticket', ticketRoute);
-index.use('/register', userRoute);
+index.use('/user', userRoute);
 index.use('/validateToken', auth);
-index.use('/profil', profil);
 index.use('/tickets', ticket);
 
 //ROUTES

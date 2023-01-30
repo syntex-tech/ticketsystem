@@ -41,6 +41,7 @@ router.get('/ticketAnzeigen', auth, async (req, res) => {
     const userId = req.userData._id;
     const skipassticket = await SkipassTicket.findOne({ userId: userId });
     const ticketId = skipassticket._id;
+    const zermatt = skipassticket.AnzahlZutritteZermatterBergbahnen;
     if (!ticketId) {
         return res.status(400).send({ message: 'Bitte kaufen sie vorher ein Ticket' });
     }

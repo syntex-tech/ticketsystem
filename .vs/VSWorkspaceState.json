@@ -5,6 +5,6 @@
     "\\backend-nodejs\\model",
     "\\backend-nodejs\\routes"
   ],
-  "SelectedNode": "\\backend-nodejs\\model\\ticket.js",
+  "SelectedNode": "\\backend-nodejs\\routes\\validateToken.js",
   "PreviewInSolutionExplorer": false
 }

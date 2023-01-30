@@ -62,6 +62,21 @@ router.post('/login', async (req, res) => {
     }
 });
 
+
+router.get('/profilAnzeigen', auth, async (req, res) => {
+    const user = await User.findById(req.userData._id);
+    res.send({
+        email: user.email,
+        Vorname: user.Vorname,
+        Nachname: user.Nachname,
+        Stadt: user.Stadt,
+        Postleitzahl: user.Postleitzahl,
+        Strasse: user.Strasse,
+        Hausnummer: user.Hausnummer,
+    });
+});
+
+
 router.post("/logout", auth, (req, res) => {
     res.clearCookie("token");
     res.send("You are logged out");
