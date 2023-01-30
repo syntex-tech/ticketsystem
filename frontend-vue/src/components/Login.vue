@@ -38,7 +38,7 @@ export default {
     }
   },
 
-  mounted(){
+  mounted() {
     this.$refs.form.addEventListener('submit', this.handleSubmit);
   },
 
@@ -48,6 +48,8 @@ export default {
       try {
         const res = await axios.post('http://localhost:3000/user/login', this.formData);
         if (res.status === 200) {
+          localStorage.setItem('token', res.data.token);
+          axios.defaults.headers.common['Authorization'] = `Bearer ${res.data.token}`;
           this.submitted = true;
         }
       } catch (error) {
@@ -60,6 +62,7 @@ export default {
   }
 }
 </script>
+
 
 <style>
 .forgot-password-button {
