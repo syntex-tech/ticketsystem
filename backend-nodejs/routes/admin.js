@@ -1,59 +1,28 @@
 const express = require('express');
 const router = express.Router();
-const Admin = require('../model/adminLogin');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
+const isAdmin = require("../routes/validateAdmin");
+const User = require('../model/userreg');
+const SkipassTicket = require('../model/SkipassTicket');
 require('dotenv').config();
 
 
 
 /* GET admin listing. */
-router.get('/', function (req, res) {
-    res.send('Hier ist Register');
+router.get('/', isAdmin, async (req, res) => {
+    res.send('Hier ist der Adminbereich');
 });
 
+router.get('/ticketLöschen', isAdmin, async (req, res) => {
+    res.send('Hier ist die route um tickets zu löschen');
 
-router.post("/registerAdmin", async (req, res) => {
-    const admin = new Admin({
-        email: req.body.email,
-        password: bcrypt.hashSync(req.body.password, 10)
-    });
-    admin.save()
-        .then(() => {
-            res.send('Die Registrierung war erfolgreich');
-        })
-        .catch(err => {
-            if (err.code === 11000) {
-                res.send('Diese E-Mail exisitiert bereits');
-            }
-        });
 });
 
-router.post("/loginAdmin", async (req, res) => {
-    try {
-        const admin = await Admin.findOne({ email: req.body.email });
-
-        if (!admin) return res.status(400).send('Diese E-Mail existiert nicht');
-
-        const validPassword = await bcrypt.compare(req.body.password, admin.password);
-
-        if (!validPassword) return res.status(400).send('Das Passwort ist falsch');
-
-        const token = jwt.sign({ _id: admin._id, email: admin.email }, process.env.SECRET);
-
-        res.send('Sie sind eingeloggt! Token: ' + token);
-
-    } catch (err) {
-        res.status(400).send(err);
-    }
+router.get('/userBefördern', isAdmin, async (req, res) => {
+    res.send('Hier ist die route um user zum Admin zu machen');
 });
 
-router.get('/admin-only', auth, async (req, res) => {
-    if (!req.userData.isAdmin) {
-        return res.status(403).send({ error: "Forbidden" });
-    }
-    // Admin-only logic here
-    res.send("Welcome, Admin!")
+router.get('/ticketScannen', isAdmin, async (req, res) => {
+    res.send('Hier ist die route um ein Ticket zu scannen und auf gültigkeit zu überprüfen');
 });
 
 module.exports = router;
