@@ -14,7 +14,7 @@ router.get('/', (req,res) => {
 });
 
 
-router.post('/', auth, async (req, res) => {
+router.post('/ticketKaufen', auth, async (req, res) => {
     const user = await User.findById(req.userData._id);
     const skipassticket = new SkipassTicket({
         userId: user._id,

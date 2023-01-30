@@ -24,6 +24,8 @@ const ZermatterBergbahnRoute = require('./backend-nodejs/routes/ZermatterBergbah
 const userRoute = require('./backend-nodejs/routes/user');
 const auth = require("./backend-nodejs/routes/validateToken");
 const ticket = require("./backend-nodejs/routes/tickets");
+const adminAuth = require("./backend-nodejs/routes/validateAdmin");
+const admin = require("./backend-nodejs/routes/admin");
 
 
 index.use(cookieParser());
@@ -32,6 +34,8 @@ index.use('/ticket', ticketRoute);
 index.use('/user', userRoute);
 index.use('/validateToken', auth);
 index.use('/tickets', ticket);
+index.use('/validateAdmin', adminAuth);
+index.use('/admin', admin);
 
 //ROUTES
 
