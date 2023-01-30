@@ -2,8 +2,8 @@
     <div class="form-container">
         <form @submit.prevent="submitForm" class="form" ref="form">
 
-            <label for="E-Mail" class="form-label">Ticket ID / Ticket Nummer</label>
-            <input type="text" v-model="formData.id" id="id" class="form-input" required />
+            <label for="id" class="form-label">Ticket ID / Ticket Nummer</label>
+            <input type="text" v-model="formData._id" id="id" class="form-input" required />
             <button type="submit" class="form-submit-btn">Zutritte aktualisieren (-1)</button>
 
         </form>
@@ -20,7 +20,7 @@ export default {
   data() {
     return {
       formData: {
-        id: '',
+        _id: '',
         error: ''
       },
       submitted: false,
