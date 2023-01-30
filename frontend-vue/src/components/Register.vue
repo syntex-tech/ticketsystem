@@ -63,7 +63,7 @@ export default {
     async handleSubmit(event) {
       event.preventDefault();
       try {+
-        await axios.post('http://localhost:3000/register/registerUser', this.formData)
+        await axios.post('http://localhost:3000/user/registerUser', this.formData)
         .then(response => {
           if(response.data === "Diese E-Mail exisitiert bereits!"){
            this.error = response.data;

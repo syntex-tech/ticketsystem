@@ -16,7 +16,7 @@
       </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       <div v-if="submitted" class="success-hint">Erfolgreich eingeloggt!</div>
-      <div v-if="error" class="error-hint">{{ error }}</div>
+      <div v-if="error" class="error-hint">{{ message }}</div>
       <p class="mt-5 mb-3 text-muted">&copy; 2023: Oberwallis</p>
   </form>
 </template>
@@ -30,7 +30,8 @@ export default {
       formData: {
         email: '',
         password: '',
-        error: ''
+        error: '',
+        message: ''
       },
       submitted: false,
       error: false
@@ -45,18 +46,15 @@ export default {
     async handleSubmit(event) {
       event.preventDefault();
       try {
-        await axios.post('http://localhost:3000/register/login', this.formData)
-        .then(response => {
-          if(response.data === "Diese E-Mail exisitiert nicht"){
-           this.error = response.data;
-          }else if(response.data === "Das Passwort ist falsch"){
-           this.error = response.data;
-          }else{
-           this.submitted = true;
-          }
-        })
-      } catch (err) {
-        console.log(err);
+        const res = await axios.post('http://localhost:3000/user/login', this.formData);
+        if (res.status === 200) {
+          this.submitted = true;
+        }
+      } catch (error) {
+        if (error.response.status === 400) {
+          this.error = true;
+          this.message = error.response.data;
+        }
       }
     }
   }
