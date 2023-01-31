@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const TicketSchema = mongoose.Schema({
     userId: {
         type: String,
-        required: true
     },
     email: {
         type: String,
