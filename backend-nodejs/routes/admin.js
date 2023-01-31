@@ -6,7 +6,6 @@ const SkipassTicket = require('../model/SkipassTicket');
 require('dotenv').config();
 
 
-
 /* GET admin listing. */
 router.get('/', isAdmin, async (req, res) => {
     res.send('Hier ist der Adminbereich');
@@ -26,7 +25,12 @@ router.post('/userBefoerdern', isAdmin, async (req, res) => {
 });
 
 router.get('/ticketScannen', isAdmin, async (req, res) => {
-    res.send('Hier ist die route um ein Ticket zu scannen und auf gültigkeit zu überprüfen');
+    const skipassticketid = await SkipassTicket.findById({ _id: req.body._id });
+    if (!skipassticketid) return res.status(404).send('Das Ticket wurde nicht gefunden');
+    res.send("Der Skipass mit der ID " + skipassticketid._id + " ist gültig.");
 });
 
+router.post('/ticketScannenZermatt', isAdmin, async (req, res) => {
+
+});
 module.exports = router;
