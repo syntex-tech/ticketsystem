@@ -27,6 +27,9 @@ router.post('/', auth, async (req,res) => {
         Strasse: user.Strasse,
         Hausnummer: user.Hausnummer,
     });
+    const ticketId = skipassticket._id;
+    const qr_svg = qr.imageSync(ticketId.toString(), { type: 'svg' });
+    const qrData = Buffer.from(qr_svg).toString('base64');
     try{
         const savedSkipassTicket = await skipassticket.save();
         res.json(savedSkipassTicket);
@@ -69,6 +72,19 @@ router.post('/', auth, async (req,res) => {
                     "Email: " + skipassticket.email + " Name: " + skipassticket.Vorname + " "
                     + skipassticket.Nachname + " Straße: " + skipassticket.Strasse + " " + skipassticket.Hausnummer
                     + " Stadt: " + skipassticket.Postleitzahl + " " + skipassticket.Stadt + " " + skipassticket._id,
+                html: `
+                    <h1>Du hast den Skipass Oberwallis gekauft!</h1>
+                    <p>Folgende Daten werden gespeichert:</p>
+                    <ul>
+                        <li>Email: ${skipassticket.email}</li>
+                        <li>Name: ${skipassticket.Vorname} ${skipassticket.Nachname}</li>
+                        <li>Straße: ${skipassticket.Strasse} ${skipassticket.Hausnummer}</li>
+                        <li>Stadt: ${skipassticket.Postleitzahl} ${skipassticket.Stadt}</li>
+                        <li>ID: ${skipassticket._id}</li>
+                    </ul>
+                        <img src="data:image/svg+xml;base64,${qrData}" alt="QR code">`
+                        
+                    
             }
             transporter.sendMail(mail_configs, function (error, info) {
                 if (error) {
