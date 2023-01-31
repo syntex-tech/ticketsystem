@@ -46,7 +46,9 @@ export default {
     async handleSubmit(event) {
       event.preventDefault();
       try {
-        const res = await axios.post('http://localhost:3000/user/login', this.formData);
+        const res = await axios.post('http://localhost:3000/user/login', this.formData, {
+          withCredentials: true
+        });
         if (res.status === 200) {
           localStorage.setItem('token', res.data.token);
           axios.defaults.headers.common['Authorization'] = `Bearer ${res.data.token}`;
