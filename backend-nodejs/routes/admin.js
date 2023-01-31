@@ -19,8 +19,10 @@ router.post('/ticketLoeschen', isAdmin, async (req, res) => {
 
 });
 
-router.get('/userBefoerdern', isAdmin, async (req, res) => {
-    res.send('Hier ist die route um user zum Admin zu machen');
+router.post('/userBefoerdern', isAdmin, async (req, res) => {
+    const user = await User.findOneAndUpdate({ email: req.body.email}, { isAdmin: true }, { new: true });
+    if (!user) return res.status(404).send('Das Benutzer wurde nicht gefunden');
+    res.send("Der Benutzer " + user.email + " wurde zum Admin befördert");
 });
 
 router.get('/ticketScannen', isAdmin, async (req, res) => {
