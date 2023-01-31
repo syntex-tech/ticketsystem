@@ -18,7 +18,7 @@ router.post('/ticketKaufen', auth, async (req, res) => {
     const user = await User.findById(req.userData._id);
     const skipassticket = new SkipassTicket({
         userId: user._id,
-        Email: user.Email,
+        email: user.email,
         Vorname: user.Vorname,
         Nachname: user.Nachname,
         Stadt: user.Stadt,

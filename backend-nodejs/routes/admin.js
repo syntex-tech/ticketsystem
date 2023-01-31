@@ -12,12 +12,14 @@ router.get('/', isAdmin, async (req, res) => {
     res.send('Hier ist der Adminbereich');
 });
 
-router.get('/ticketLöschen', isAdmin, async (req, res) => {
-    res.send('Hier ist die route um tickets zu löschen');
+router.post('/ticketLoeschen', isAdmin, async (req, res) => {
+    const skipassticket = await SkipassTicket.findOneAndDelete({ email: req.body.email });
+    if (!skipassticket) return res.status(404).send('Das Ticket wurde nicht gefunden');
+    res.send("Der Skipass vom Benutzer " + skipassticket.email + " wurde gelöscht");
 
 });
 
-router.get('/userBefördern', isAdmin, async (req, res) => {
+router.get('/userBefoerdern', isAdmin, async (req, res) => {
     res.send('Hier ist die route um user zum Admin zu machen');
 });
 

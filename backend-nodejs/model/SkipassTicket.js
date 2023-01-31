@@ -6,9 +6,10 @@ const TicketSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    Email: {
+    email: {
         type: String,
         reuired: true,
+        unique: true,
         max: 255,
         min:3
     },
