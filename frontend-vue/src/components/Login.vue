@@ -43,15 +43,13 @@ export default {
   },
 
   methods: {
+    
     async handleSubmit(event) {
       event.preventDefault();
       try {
-        const res = await axios.post('http://localhost:3000/user/login', this.formData, {
-          withCredentials: true
-        });
+        const res = await axios.post('http://localhost:3000/user/login', this.formData,);
         if (res.status === 200) {
-          localStorage.setItem('token', res.data.token);
-          axios.defaults.headers.common['Authorization'] = `Bearer ${res.data.token}`;
+          document.cookie = `token=${res.data.token}`;
           this.submitted = true;
         }
       } catch (error) {
@@ -61,6 +59,7 @@ export default {
         }
       }
     }
+    
   }
 }
 </script>
