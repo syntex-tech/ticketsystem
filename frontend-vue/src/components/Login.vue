@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import { useRouter } from 'vue-router';
 import axios from 'axios';
 
 export default {
@@ -51,6 +52,8 @@ export default {
         if (res.status === 200) {
           document.cookie = `token=${res.data.token}`;
           this.submitted = true;
+          const router = useRouter();
+          router.push('/profile');
         }
       } catch (error) {
         if (error.response.status === 400) {
