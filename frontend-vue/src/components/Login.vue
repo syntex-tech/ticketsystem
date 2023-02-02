@@ -50,12 +50,13 @@ export default {
       try {
         const res = await axios.post('http://localhost:3000/user/login', this.formData,);
         if (res.status === 200) {
+          console.log(res);
           document.cookie = `token=${res.data.token}`;
           this.submitted = true;
-          const router = useRouter();
-          router.push('/profile');
+          this.$router.push('/profile');
         }
       } catch (error) {
+        console.log(error);
         if (error.response.status === 400) {
           this.error = true;
           this.message = error.response.data;
