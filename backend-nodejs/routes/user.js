@@ -53,8 +53,8 @@ router.post('/login', async (req, res) => {
         });
 
         res.cookie('token', token);
-
-        res.send('Sie sind eingeloggt!');
+        //Token wird über res.send an frontend geschickt.
+        res.send(token);
 
     } catch (err) {
         res.status(400).send(err);
