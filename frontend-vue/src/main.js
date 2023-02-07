@@ -10,6 +10,7 @@ import Login from './components/Login.vue'
 import Register from './components/Register.vue'
 import ZermatterBergbahn from './components/ZermatterBergbahn.vue'
 import Profile from './components/Profile.vue'
+import Admin from './components/Admin.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -21,7 +22,8 @@ const router = createRouter({
         {path: '/login', name: 'Login', component: Login},
         {path: '/register', name: 'Register', component: Register},
         {path: '/zermatterbergbahn', name: 'ZermatterBergbahn', component: ZermatterBergbahn},
-        {path: '/profile', name: 'Profile', component: Profile}
+        {path: '/profile', name: 'Profile', component: Profile},
+        {path: '/admin', name: 'Admin', component: Admin},
         
     ]
 

@@ -26,13 +26,16 @@
     <ul class="navbar-nav me-auto"> 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Mein Profil
+          Profil
         </a>  
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <router-link style="text-decoration: none; color: inherit;" to="/login"><a class="dropdown-item">Login</a></router-link>
           <router-link style="text-decoration: none; color: inherit;" to="/register"><a class="dropdown-item">Registrieren</a></router-link>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item">Something else here</a>
+          <div >
+          <router-link style="text-decoration: none; color: inherit;" to="/profile"><a class="dropdown-item">Mein Profil</a></router-link>
+          <a href="#" @click="logout">Logout</a>
+          </div>
         </div>
       </li>
     </ul>
@@ -49,7 +52,6 @@
 </template>
 
 <style>
-
   .navbar-nav > li{
   padding-left:25px;
   padding-right:25px;
@@ -81,9 +83,31 @@
      padding: 10px 5px;
      transition: 0.2s
  }
- 
 </style>
 
 <script>
-export default{};
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      user: null
+    };
+  },
+  computed: {
+    isLoggedIn() {
+      return this.user !== null;
+    }
+  },
+  methods: {
+    async logout() {
+      try {
+        await axios.post("/logout");
+        this.user = null;
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  }
+};
 </script>
