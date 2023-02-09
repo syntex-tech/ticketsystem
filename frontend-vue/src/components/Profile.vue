@@ -30,8 +30,9 @@
             <p class="profile-value">{{ user.Hausnummer }}</p>
         </div>
         <div class="profile-box">
-            <p class="profile-label">Mein Ticket:</p>
-            <p class="profile-value">{{ qr_svg }}</p>
+            <p class="profile-label">Ticket:</p>
+            <img v-if="ticket" :src="ticket" />
+            <p v-else class="profile-value">No ticket found</p>
         </div>
     </div>
 </template>
@@ -43,11 +44,12 @@
         data() {
             return {
                 user: {},
-                qr_svg
+                ticket: null
             }
         },
         mounted() {
             this.getProfile();
+            this.getTicket();
         },
         methods: {
             async getProfile() {
@@ -60,6 +62,19 @@
                     });
 
                     this.user = res.data;
+                } catch (err) {
+                    console.log(err);
+                }
+            },
+            async getTicket() {
+                try {
+                    const res = await axios.get('http://localhost:3000/ticket/ticketAnzeigen', {
+                        headers: {
+                            Authorization: 'Bearer ' + localStorage.getItem('token')
+                        },
+                        responseType: 'arraybuffer'
+                    });
+                    this.ticket = 'data:image/svg+xml;base64,' + Buffer.from(res.data).toString('base64');
                 } catch (err) {
                     console.log(err);
                 }
