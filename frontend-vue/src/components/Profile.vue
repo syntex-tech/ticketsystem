@@ -29,6 +29,10 @@
             <p class="profile-label">Hausnummer:</p>
             <p class="profile-value">{{ user.Hausnummer }}</p>
         </div>
+        <div class="profile-box">
+            <p class="profile-label">Mein Ticket:</p>
+            <p class="profile-value">{{ qr_svg }}</p>
+        </div>
     </div>
 </template>
 
@@ -38,7 +42,8 @@
     export default {
         data() {
             return {
-                user: {}
+                user: {},
+                qr_svg
             }
         },
         mounted() {

@@ -30,6 +30,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <router-link style="text-decoration: none; color: inherit;" to="/login"><a class="dropdown-item">Login</a></router-link>
                         <router-link style="text-decoration: none; color: inherit;" to="/register"><a class="dropdown-item">Registrieren</a></router-link>
+                        <router-link style="text-decoration: none; color: inherit;" to="/admin"><a class="dropdown-item">Admin</a></router-link>
                         <div class="dropdown-divider"></div>
                         <div>
                             <router-link style="text-decoration: none; color: inherit;" to="/profile"><a class="dropdown-item">Mein Profil</a></router-link>
@@ -37,14 +38,6 @@
                     </div>
                 </li>
             </ul>
-
-            <!-- Searchbar (currently disabled)
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-            -->
-
         </div>
     </nav>
 </template>
