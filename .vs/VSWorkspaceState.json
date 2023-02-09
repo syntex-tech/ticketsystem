@@ -3,7 +3,12 @@
     "",
     "\\backend-nodejs",
     "\\backend-nodejs\\model",
-    "\\backend-nodejs\\routes"
+    "\\backend-nodejs\\routes",
+    "\\frontend-vue",
+    "\\frontend-vue\\public",
+    "\\frontend-vue\\src",
+    "\\frontend-vue\\src\\assets",
+    "\\frontend-vue\\src\\components"
   ],
   "SelectedNode": "\\backend-nodejs\\routes\\validateAdmin.js",
   "PreviewInSolutionExplorer": false
