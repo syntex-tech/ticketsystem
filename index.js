@@ -8,10 +8,10 @@ require('dotenv/config');
 
 
 index.use(cors({
-    origin: "http://localhost:5173",
-    origin: "127.0.0.1:5173",
+    origin: ["http://localhost:5173", "127.0.0.1:5173"],
     credentials: true
 }));
+
 
 /*index.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "http://localhost:5173");
