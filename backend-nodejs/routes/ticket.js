@@ -102,14 +102,13 @@ router.post('/', auth, async (req,res) => {
 router.get('/ticketAnzeigen', auth, async (req, res) => {
     const userId = req.userData._id;
     const skipassticket = await SkipassTicket.findOne({ userId: userId });
-    const ticketId = skipassticket._id;
-    if (!ticketId) {
+    if (!skipassticket) {
         return res.status(400).send({ message: 'Bitte kaufen sie vorher ein Ticket' });
     }
+    const ticketId = skipassticket._id;
     const qr_svg = qr.imageSync(ticketId.toString(), { type: 'svg' });
     res.type('svg');
     res.send(qr_svg);
-
 });
 
 module.exports = router;

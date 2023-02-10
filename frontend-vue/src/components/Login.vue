@@ -19,17 +19,14 @@
 </template>
 
 <script>
-    import { useRouter } from 'vue-router';
     import axios from 'axios';
     export default {
         data() {
             return {
                 formData: {
                     email: '',
-                    password: '',
                     error: '',
                     message: '',
-                    token: ''
                 },
                 submitted: false,
                 error: false

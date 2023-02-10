@@ -31,7 +31,7 @@
         </div>
         <div class="profile-box">
             <p class="profile-label">Ticket:</p>
-            <img v-if="qrCodeUrl" :src="qrCodeUrl" style="width: 200px; height: 200px;"/>
+            <img v-if="qrCode !== 'null'" :src="qrCodeUrl" style="width: 200px; height: 200px;" />
             <p v-else class="profile-value">No ticket found</p>
         </div>
     </div>
@@ -44,12 +44,14 @@
         data() {
             return {
                 user: {},
-                qrCodeUrl: ''
+                qrCodeUrl: 'null',
+                qrCode: 'null',
+                error: '',
             }
         },
         mounted() {
             this.getProfile();
-            this.getTicket();
+            this.getTicket(null);
         },
         methods: {
             async getProfile() {
@@ -73,7 +75,9 @@
                             Authorization: 'Bearer ' + localStorage.getItem('token')
                         },
                     });
+
                     const qrCode = qr_res.data;
+                    this.qrCode = qrCode;
                     this.qrCodeUrl = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(qrCode);
                 } catch (err) {
                     console.log(err);

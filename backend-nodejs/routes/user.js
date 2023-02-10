@@ -52,7 +52,7 @@ router.post('/login', async (req, res) => {
             expiresIn: 1800
         });
 
-        res.cookie('token', token);
+        res.cookie('Bearer', token);
         //Token wird über res.send an frontend geschickt.
         res.send(token);
 
