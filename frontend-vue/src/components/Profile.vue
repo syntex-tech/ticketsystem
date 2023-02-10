@@ -75,7 +75,6 @@
                             Authorization: 'Bearer ' + localStorage.getItem('token')
                         },
                     });
-
                     const qrCode = qr_res.data;
                     this.qrCode = qrCode;
                     this.qrCodeUrl = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(qrCode);

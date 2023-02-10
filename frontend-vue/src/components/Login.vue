@@ -3,7 +3,7 @@
         <img class="mb-4" src="../assets/images/small icons/logotest2.png" alt="" width="90" height="90">
         <h1 class="h3 mb-3 font-weight-normal">Logge Dich ein!</h1>
         <label for="inputEmail" class="sr-only">E-Mail</label>
-        <input type="email" id="inputEmail" v-model="formData.email" class="form-control" placeholder="E-Mail" required autofocus>
+        <input type="email" id="email" v-model="formData.email" class="form-control" placeholder="E-Mail" required autofocus>
         <label for="inputPassword" class="sr-only">Passwort</label>
         <input type="password" id="inputPassword" v-model="formData.password" class="form-control" placeholder="Passwort" required>
         <div class="checkbox mb-3">

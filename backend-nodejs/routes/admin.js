@@ -10,6 +10,7 @@ require('dotenv').config();
 router.get('/', isAdmin, async (req, res) => {
     const user = await User.findById(req.userData._id);
     res.send({
+        Vorname: user.Vorname,
         isAdmin: user.isAdmin
     });
 });
@@ -27,10 +28,17 @@ router.post('/userBefoerdern', isAdmin, async (req, res) => {
     res.send("Der Benutzer " + user.email + " wurde zum Admin befördert");
 });
 
-router.get('/ticketScannen', isAdmin, async (req, res) => {
-    const skipassticketid = await SkipassTicket.findById({ _id: req.body._id });
-    if (!skipassticketid) return res.status(404).send('Das Ticket wurde nicht gefunden');
-    res.send("Der Skipass mit der ID " + skipassticketid._id + " ist gültig.");
+router.post('/ticketScannen', isAdmin, async (req, res) => {
+    try {
+        const skipassticketid = await SkipassTicket.findById({ _id: req.body._id });
+        if (!skipassticketid) {
+            return res.status(404).send('Das Ticket wurde nicht gefunden');
+        } else {
+            res.send("Der Skipass mit der ID " + skipassticketid._id + " ist gültig.");
+        }
+    } catch (error) {
+        return res.status(500).send('Ein Fehler ist aufgetreten');
+    }
 });
 /*
 router.post('/ticketScannenZermatt', isAdmin, async (req, res) => {

@@ -39,10 +39,10 @@
         <form @submit.prevent="submitForm" class="form" ref="form">
 
 
-            <button type="submit" class="form-submit-btn">Submit</button>
+            <button type="submit" class="form-submit-btn">Skipass Kaufen</button>
         </form>
         <div v-if="error" class="error-hint">{{ error }}</div>
-        <div v-if="submitted" class="success-hint">Dein Ticket wurde erstellt!</div>
+        <div v-if="submitted" class="success-hint">Sie haben den Oberwalliser Skipass gekauft! Ihr Ticket finden sie in ihrer E-Mail und in ihrem Profil</div>
     </div>
 </template>
 
@@ -81,7 +81,6 @@
                         console.log(res);
                         // Token wird hier in localStorage gespeichert
                         this.submitted = true;
-                        this.$router.push('/profile');
                     }
                 } catch (error) {
                     console.log(error);
