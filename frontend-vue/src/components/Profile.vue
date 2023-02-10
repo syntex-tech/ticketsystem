@@ -31,7 +31,7 @@
         </div>
         <div class="profile-box">
             <p class="profile-label">Ticket:</p>
-            <img v-if="ticket" :src="ticket" />
+            <img v-if="qrCodeUrl" :src="qrCodeUrl" style="width: 200px; height: 200px;"/>
             <p v-else class="profile-value">No ticket found</p>
         </div>
     </div>
@@ -44,12 +44,12 @@
         data() {
             return {
                 user: {},
-                //ticket: null
+                qrCodeUrl: ''
             }
         },
         mounted() {
             this.getProfile();
-            //this.getTicket();
+            this.getTicket();
         },
         methods: {
             async getProfile() {
@@ -66,19 +66,19 @@
                     console.log(err);
                 }
             },
-            /*async getTicket() {
+            async getTicket() {
                 try {
-                    const res = await axios.get('http://localhost:3000/ticket/ticketAnzeigen', {
+                    const qr_res = await axios.get('http://localhost:3000/ticket/ticketAnzeigen', {
                         headers: {
                             Authorization: 'Bearer ' + localStorage.getItem('token')
                         },
-                        responseType: 'arraybuffer'
                     });
-                    this.ticket = 'data:image/svg+xml;base64,' + Buffer.from(res.data).toString('base64');
+                    const qrCode = qr_res.data;
+                    this.qrCodeUrl = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(qrCode);
                 } catch (err) {
                     console.log(err);
                 }
-            }*/
+            }
         }
     }
 </script>

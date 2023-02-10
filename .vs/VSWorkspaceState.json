@@ -10,6 +10,6 @@
     "\\frontend-vue\\src\\assets",
     "\\frontend-vue\\src\\components"
   ],
-  "SelectedNode": "\\backend-nodejs\\routes\\validateAdmin.js",
+  "SelectedNode": "\\frontend-vue\\src\\components\\Ticketshop.vue",
   "PreviewInSolutionExplorer": false
 }
