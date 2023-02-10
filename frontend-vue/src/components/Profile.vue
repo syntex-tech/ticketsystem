@@ -44,12 +44,12 @@
         data() {
             return {
                 user: {},
-                ticket: null
+                //ticket: null
             }
         },
         mounted() {
             this.getProfile();
-            this.getTicket();
+            //this.getTicket();
         },
         methods: {
             async getProfile() {
@@ -66,7 +66,7 @@
                     console.log(err);
                 }
             },
-            async getTicket() {
+            /*async getTicket() {
                 try {
                     const res = await axios.get('http://localhost:3000/ticket/ticketAnzeigen', {
                         headers: {
@@ -78,7 +78,7 @@
                 } catch (err) {
                     console.log(err);
                 }
-            }
+            }*/
         }
     }
 </script>
