@@ -24,14 +24,12 @@ index.use(bodyParser.json());
 
 //Import ROUTES
 const ticketRoute = require('./backend-nodejs/routes/ticket');
-const ZermatterBergbahnRoute = require('./backend-nodejs/routes/ZermatterBergbahn');
 const userRoute = require('./backend-nodejs/routes/user');
 const auth = require("./backend-nodejs/routes/validateToken");
 const adminAuth = require("./backend-nodejs/routes/validateAdmin");
 const admin = require("./backend-nodejs/routes/admin");
 
 index.use(cookieParser());
-index.use('/ZermatterBergbahn', ZermatterBergbahnRoute);
 index.use('/ticket', ticketRoute);
 index.use('/user', userRoute);
 index.use('/validateToken', auth);
@@ -40,7 +38,7 @@ index.use('/admin', admin);
 
 //ROUTES
 
-index.get('/', (req,res) => {
+index.get('/', (req, res) => {
     res.send('We are on home');
 });
 

@@ -7,7 +7,6 @@ require('dotenv').config();
 const router = express.Router();
 
 
-/* GET users listing. */
 router.get('/', function (req, res) {
     res.send('Hier ist Register');
 });

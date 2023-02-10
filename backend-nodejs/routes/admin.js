@@ -6,7 +6,6 @@ const SkipassTicket = require('../model/SkipassTicket');
 require('dotenv').config();
 
 
-/* GET admin listing. */
 router.get('/', isAdmin, async (req, res) => {
     const user = await User.findById(req.userData._id);
     res.send({
@@ -23,7 +22,7 @@ router.post('/ticketLoeschen', isAdmin, async (req, res) => {
 });
 
 router.post('/userBefoerdern', isAdmin, async (req, res) => {
-    const user = await User.findOneAndUpdate({ email: req.body.email}, { isAdmin: true }, { new: true });
+    const user = await User.findOneAndUpdate({ email: req.body.email }, { isAdmin: true }, { new: true });
     if (!user) return res.status(404).send('Das Benutzer wurde nicht gefunden');
     res.send("Der Benutzer " + user.email + " wurde zum Admin befördert");
 });
@@ -40,7 +39,7 @@ router.post('/ticketScannen', isAdmin, async (req, res) => {
         return res.status(500).send('Ein Fehler ist aufgetreten');
     }
 });
-/*
+
 router.post('/ticketScannenZermatt', isAdmin, async (req, res) => {
     res.contentType('application/json');
     res.type('json');
@@ -52,26 +51,20 @@ router.post('/ticketScannenZermatt', isAdmin, async (req, res) => {
     );
     if (!SkipassTicket) {
         res.status(400);
-        return res.send({
-            message: 'Ticket not found'
-        });
+        return res.send('Das Ticket ist nicht gültig!');
     }
-    //if statement muss noch gemacht werden Die Zahl 5 wird noch nicht erkannt und das System denkt, dass es kleiner ist als 
 
     if (AnzahlZutritte.AnzahlZutritteZermatterBergbahnen > 0) {
-        const AnzahlZutritteZermatterBergbahnen2 = await SkipassTicket.findOneAndUpdate({
+        const zermatt = await SkipassTicket.findOneAndUpdate({
             _id: req.body._id,
         },
             {
                 $inc: { AnzahlZutritteZermatterBergbahnen: -1 }
             });
-        return res.send({
-            message: 'Die Anzahl der Zutritte wurde aktualisiert!'
-        })
+        const verbleibendeZutritte = zermatt.AnzahlZutritteZermatterBergbahnen - 1;
+        return res.send('Die Anzahl der Zutritte wurde aktualisiert! Verbleibende Zutritte: ' + verbleibendeZutritte)
     } else {
-        return res.send({
-            message: "Sie haben bereits alle 5 Zutritte der Bergbahn verbraucht!"
-        })
+        return res.send("Sie haben bereits alle 5 Zutritte der Zermatter Bergbahn verbraucht!")
     }
-});*/
+});
 module.exports = router;

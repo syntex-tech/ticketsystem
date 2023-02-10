@@ -77,21 +77,21 @@
         display: block;
     }
 
-    .forgot-password-button:hover {
-        background-color: #333;
-        color: #fff;
-        cursor: pointer;
-    }
+        .forgot-password-button:hover {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
 
     .logologin {
         text-align: center;
         margin-bottom: 20px;
     }
 
-    .logologin img {
-        height: 100px;
-        width: 100px;
-    }
+        .logologin img {
+            height: 100px;
+            width: 100px;
+        }
 
     .parent-container {
         position: relative;
@@ -99,17 +99,17 @@
         width: 100%;
     }
 
-    .parent-container::before {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background-image: url('../assets/images/panorama_mountains3.jpg');
-        background-size: cover;
-        filter: blur(5px);
-        transform: scale(1.1);
-        z-index: -1;
-    }
+        .parent-container::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: url('../assets/images/panorama_mountains3.jpg');
+            background-size: cover;
+            filter: blur(5px);
+            transform: scale(1.1);
+            z-index: -1;
+        }
 
     .container-box {
         display: flex;
@@ -132,9 +132,10 @@
         box-shadow: 0px 0px 10px 0px #ccc;
         width: 500px; /* Or any value that works for you*/
     }
+
     h1 {
         text-align: center;
-        font-size: 2em;        
+        font-size: 2em;
         margin-top: 50px;
         margin-bottom: 30px;
     }
@@ -163,10 +164,10 @@
         border-radius: 4px;
     }
 
-    input[type="email"]:focus,
-    input[type="password"]:focus {
-        border: 2px solid rgb(75, 75, 75);
-    }
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border: 2px solid rgb(75, 75, 75);
+        }
 
     button {
         background-color: #00a136;
@@ -175,12 +176,12 @@
         border: none;
         border-radius: 4px;
         font-size: 1.2rem;
-        cursor: pointer;   
+        cursor: pointer;
         margin-top: 1rem;
         transition: background 0.2s ease-in-out;
     }
 
-    button:hover {
-        background: #00852c;
-    }
+        button:hover {
+            background: #00852c;
+        }
 </style>

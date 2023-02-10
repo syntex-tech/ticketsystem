@@ -8,13 +8,13 @@ const router = express.Router();
 require('dotenv').config();
 
 
-router.get('/', (req,res) => {
+router.get('/', (req, res) => {
     res.send('Hier kannst du den Skipass kaufen!');
 });
 
 
 
-router.post('/', auth, async (req,res) => {
+router.post('/', auth, async (req, res) => {
     let responseSent = false;
     const user = await User.findById(req.userData._id);
     const skipassticket = new SkipassTicket({
@@ -30,26 +30,26 @@ router.post('/', auth, async (req,res) => {
     const ticketId = skipassticket._id;
     const qr_svg = qr.imageSync(ticketId.toString(), { type: 'svg' });
     const qrData = Buffer.from(qr_svg).toString('base64');
-    try{
+    try {
         const savedSkipassTicket = await skipassticket.save();
         res.json(savedSkipassTicket);
         responseSent = true;
         sendEmail()
-        .then(response => {
-            if (!responseSent) {
-                res.send(response.message)
-                responseSent = true;
-            }
-        })
-        .catch(error => {
-            if (!responseSent) {
-                res.status(500).send(error.message)
-                responseSent = true;
-            }
-        })
-    } catch(err){
+            .then(response => {
+                if (!responseSent) {
+                    res.send(response.message)
+                    responseSent = true;
+                }
+            })
+            .catch(error => {
+                if (!responseSent) {
+                    res.status(500).send(error.message)
+                    responseSent = true;
+                }
+            })
+    } catch (err) {
         if (!responseSent) {
-            res.json({message: err });
+            res.json({ message: err });
             responseSent = true;
         }
     }
@@ -83,8 +83,6 @@ router.post('/', auth, async (req,res) => {
                         <li>ID: ${skipassticket._id}</li>
                     </ul>
                         <img src="data:image/svg+xml;base64,${qrData}" alt="QR code">`
-                        
-                    
             }
             transporter.sendMail(mail_configs, function (error, info) {
                 if (error) {
@@ -95,7 +93,6 @@ router.post('/', auth, async (req,res) => {
             })
         })
     }
-
 });
 
 

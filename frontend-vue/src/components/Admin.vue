@@ -30,9 +30,16 @@
                 <button type="submit">Ticket Prüfen</button>
             </form>
         </div>
+        <div class="admin-section">
+            <h2>Ticket für Zermatter Bergbahnen Prüfen</h2>
+            <form @submit.prevent="scanTicketZermatt">
+                <input type="text" v-model="_id" placeholder="Ticket ID" required />
+                <button type="submit">Ticket für Zermatt Prüfen</button>
+            </form>
         </div>
-        <div v-else>
-            <!-- Hier ist der Inhalt der Seite, die für Benutzer sichtbar ist, die nicht über die erforderlichen Berechtigungen verfügen -->
+    </div>
+    <div v-else>
+        <!-- Hier ist der Inhalt der Seite, die für Benutzer sichtbar ist, die nicht über die erforderlichen Berechtigungen verfügen -->
         <h1>Sie haben keine Berechtigung um diese Seite zu sehen!</h1>
     </div>
 </template>
@@ -99,6 +106,20 @@
             async scanTicket() {
                 try {
                     const response = await axios.post('http://localhost:3000/admin/ticketScannen', { _id: this._id }, {
+                        headers: {
+                            Authorization: 'Bearer ' + localStorage.getItem('token')
+                        },
+                    });
+                    console.log(response.data);
+                    alert(response.data);
+                } catch (err) {
+                    console.error(err);
+                    alert('Das Ticket ist nicht gültig!');
+                }
+            },
+            async scanTicketZermatt() {
+                try {
+                    const response = await axios.post('http://localhost:3000/admin/ticketScannenZermatt', { _id: this._id }, {
                         headers: {
                             Authorization: 'Bearer ' + localStorage.getItem('token')
                         },
