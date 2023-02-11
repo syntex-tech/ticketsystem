@@ -1,6 +1,6 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <router-link style="text-decoration: none; color: inherit;" to="/"><a class="navbar-brand" href="#">SkyPath</a></router-link>
+        <router-link style="text-decoration: none; color: inherit;" to="/"><a class="navbar-brand" href="#">Oberwallis</a></router-link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
