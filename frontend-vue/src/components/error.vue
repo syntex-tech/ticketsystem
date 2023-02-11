@@ -1,5 +1,5 @@
 <template>
-    <h1>Hier brauchts eine errorpage für die errorhandler</h1>
+    <h1>Error</h1>
 </template>
 
 <script>
