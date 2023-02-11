@@ -5,36 +5,68 @@
         <div class="jumbotron">
             <div class="container">
                 <h1 class="display-3">Ticketshop</h1>
-                <p>Wir bieten Dir drei verschiedene Ticketkategorien an. Wähle das passende für Dich aus und klicke einfach auf "Buchen"! Du wirst automatisch weitergeleitet.</p>
+                <p>Wir bieten Dir drei verschiedene Ticketkategorien an. Wähle das passende für Dich aus und klicke einfach auf "Skipass Kaufen"!</p>
             </div>
         </div>
 
-        <div class="container">
-            <!-- Example row of columns -->
-            <div class="row">
-                <div class="col-md-4">
-                    <h2>SOLO</h2>
-                    <p>Für abenteuerlustige, tapfere und willensstarke Alleingänger. Eine Verschnaufpause ganz mit sich selbst - das muss auch mal sein. Wir haben das Richtige für Dich!</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        <section class="category section pt-3 pb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-12 col-md-6">
+                        <div class="cat-item mb-4 mb-lg-0">
+                        <img src="../assets/images/Skifahrer_HalfBanner.png" alt="" class="img-fluid">
+                    <div class="item-info">
+                    <h4 class="mb-4"><strong>Solo Ticket</strong></h4>
+                    <p class="mb-0">Eine Verschnaufpause ganz mit sich selbst - das muss auch mal sein.</p>
+                    <p></p>
+                    <p class="mb-0"><strong>65€ / 55€ Einheimische</strong></p>
+                    <p></p>
+                    <!--<a href="#" class="read-more">Skipass Kaufen</a>-->
+
+                    <!--New Button position-->
+                    <form @submit.prevent="submitForm" class="form" ref="form">
+                    <button type="submit" class="form-submit-btn">Skipass Kaufen</button>
+                    </form>
+                    <div v-if="error" class="error-hint">{{ error }}</div>
+                    <div v-if="submitted" class="success-hint">Sie haben den Oberwalliser Skipass gekauft! Ihr Ticket finden sie in ihrer E-Mail und in ihrem Profil</div>
+                    
                 </div>
-                <div class="col-md-4">
-                    <h2>COMBO</h2>
-                    <p>Doppelt hält besser - wir haben genau das Richtige für euch! </p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-                </div>
-                <div class="col-md-4">
-                    <h2>FAMILY</h2>
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                 </div>
             </div>
-
-            <hr>
-
-        </div> <!-- /container -->
+            <div class="col-lg-4 col-sm-12 col-md-6">
+                <div class="cat-item mb-4 mb-lg-0">
+                <img src="../assets/images/mänWeiblBanner.png" alt="" class="img-fluid">
+                <div class="item-info">
+                    <h4 class="mb-4"><strong>Duo Ticket</strong></h4>
+                    <p class="mb-0">Doppelt hält besser - wir haben genau das Richtige für euch!</p>
+                    <p></p>
+                    <p class="mb-0"><strong>120€ / 110€ Einheimische</strong></p>
+                    <p></p>
+                    <p class="mb-0"><strong><font color="red">ERST AB DEM 01.03.2023 ERHÄLTLICH!</font></strong></p>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 col-md-6">
+                <div class="cat-item">
+                <img src="../assets/images/FamilienBanner.png" alt="" class="img-fluid">
+                <div class="item-info">
+                    <h4 class="mb-4"><strong>Familien Ticket</strong></h4>
+                    <p class="mb-0">Die Zeit mit der Familie zusammen ist noch immer die Beste!</p>
+                    <p></p>
+                    <p class="mb-0"><strong>240€ / 220€ Einheimische</strong></p>
+                    <p></p>
+                    <p class="mb-0"><strong><font color="red">ERST AB DEM 01.03.2023 ERHÄLTLICH!</font></strong></p>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
 
     </main>
-
+    
+    <!--Old Button position-->
+    <!--
     <div class="form-container">
         <form @submit.prevent="submitForm" class="form" ref="form">
 
@@ -44,6 +76,7 @@
         <div v-if="error" class="error-hint">{{ error }}</div>
         <div v-if="submitted" class="success-hint">Sie haben den Oberwalliser Skipass gekauft! Ihr Ticket finden sie in ihrer E-Mail und in ihrem Profil</div>
     </div>
+    -->
 </template>
 
 <script>
