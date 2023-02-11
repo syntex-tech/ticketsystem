@@ -3,7 +3,7 @@
   <div class="jumbotron">
             <div class="container">
                 <h1 class="display-3">Registrierung</h1>
-                <p>Willkommen bei der Registrierung für unser Online Ticketsystem Oberwallis! Mit einem Benutzerkonto haben Sie Zugang zu allen Funktionen unserer Website und können bequem und sicher Ihre Skitickets kaufen. Bitte füllen Sie das nachfolgende Formular aus, um Ihr Konto zu erstellen.</p>
+                <p>Willkommen bei der Registrierung für unser Online Ticketsystem Oberwallis! Mit einem Benutzerkonto hast du Zugang zu allen Funktionen unserer Website und kannst bequem dein Skiticket kaufen. Bitte fülle das nachfolgende Formular aus, um dein Konto zu erstellen.</p>
             </div>
         </div>
     <div class="form-container">
