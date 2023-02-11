@@ -1,4 +1,10 @@
 <template>
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-3">Registrierung</h1>
+            </div>
+        </div>
     <div class="form-container">
         <form @submit.prevent="submitForm" class="form" ref="form">
             <label for="E-Mail" class="form-label">E-Mail</label>
