@@ -4,7 +4,7 @@
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
             <div class="container">
-                <h1 class="display-3">Ticketshop</h1>
+                <h1 class="display-3">Tickets - Tarife 2023</h1>
                 <p>Wir bieten Dir drei verschiedene Ticketkategorien an. Wähle das passende für Dich aus und klicke einfach auf "Skipass Kaufen"!</p>
             </div>
         </div>
