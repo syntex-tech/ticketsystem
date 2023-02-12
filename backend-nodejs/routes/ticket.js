@@ -82,7 +82,7 @@ router.post('/', auth, async (req, res) => {
                         <li>Stadt: ${skipassticket.Postleitzahl} ${skipassticket.Stadt}</li>
                         <li>ID: ${skipassticket._id}</li>
                     </ul>
-                        <img src="data:image/svg+xml;base64,${qrData}" alt="QR code">`
+                        <img src="data:image/svg+xml;base64,${qrData}" style="width: 200px; height: 200px; alt="QR code">`
             }
             transporter.sendMail(mail_configs, function (error, info) {
                 if (error) {
