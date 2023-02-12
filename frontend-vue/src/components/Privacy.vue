@@ -16,7 +16,7 @@
         <p>Stand: 12. Februar 2023</p>
         <h2>Inhaltsübersicht</h2>
         <ul class="index">
-            <li><a class="index-link" href="#m4158">Einleitung</a></li>
+            <a class="index-link" href="#m4158">Einleitung</a>
             <li><a class="index-link" href="#m3">Verantwortlicher</a></li>
             <li><a class="index-link" href="#m11">Kontakt Datenschutzbeauftragter</a></li>
             <li><a class="index-link" href="#mOverview">Übersicht der Verarbeitungen</a></li>
