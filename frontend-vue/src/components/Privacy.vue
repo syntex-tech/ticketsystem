@@ -16,19 +16,19 @@
         <p>Stand: 12. Februar 2023</p>
         <h2>Inhaltsübersicht</h2>
         <ul class="index">
-            <a class="index-link" href="#m4158">Einleitung</a>
-            <li><a class="index-link" href="#m3">Verantwortlicher</a></li>
-            <li><a class="index-link" href="#m11">Kontakt Datenschutzbeauftragter</a></li>
-            <li><a class="index-link" href="#mOverview">Übersicht der Verarbeitungen</a></li>
-            <li><a class="index-link" href="#m13">Maßgebliche Rechtsgrundlagen</a></li>
-            <li><a class="index-link" href="#m24">Datenverarbeitung in Drittländern</a></li>
-            <li><a class="index-link" href="#m12">Löschung von Daten</a></li>
-            <li><a class="index-link" href="#m317">Geschäftliche Leistungen</a></li>
-            <li><a class="index-link" href="#m326">Zahlungsverfahren</a></li>
-            <li><a class="index-link" href="#m367">Registrierung, Anmeldung und Nutzerkonto</a></li>
-            <li><a class="index-link" href="#m638">Werbliche Kommunikation via E-Mail, Post, Fax oder Telefon</a></li>
-            <li><a class="index-link" href="#m328">Plugins und eingebettete Funktionen sowie Inhalte</a></li>
-            <li><a class="index-link" href="#m15">Änderung und Aktualisierung der Datenschutzerklärung</a></li>
+            <a class="index-link" href="#m4158">Einleitung</a><br>
+            <a class="index-link" href="#m3">Verantwortlicher</a><br>
+            <a class="index-link" href="#m11">Kontakt Datenschutzbeauftragter</a><br>
+            <a class="index-link" href="#mOverview">Übersicht der Verarbeitungen</a><br>
+            <a class="index-link" href="#m13">Maßgebliche Rechtsgrundlagen</a><br>
+            <a class="index-link" href="#m24">Datenverarbeitung in Drittländern</a><br>
+            <a class="index-link" href="#m12">Löschung von Daten</a><br>
+            <a class="index-link" href="#m317">Geschäftliche Leistungen</a><br>
+            <a class="index-link" href="#m326">Zahlungsverfahren</a><br>
+            <a class="index-link" href="#m367">Registrierung, Anmeldung und Nutzerkonto</a><br>
+            <a class="index-link" href="#m638">Werbliche Kommunikation via E-Mail, Post, Fax oder Telefon</a><br>
+            <a class="index-link" href="#m328">Plugins und eingebettete Funktionen sowie Inhalte</a><br>
+            <a class="index-link" href="#m15">Änderung und Aktualisierung der Datenschutzerklärung</a>
         </ul>
         <h2 id="m3">Verantwortlicher</h2>
         <p>Julian Meißer, <br>Lohrtalweg 10, <br>74821 Mosbach</p>
@@ -42,32 +42,32 @@
             verweist auf die betroffenen Personen.</p>
         <h3>Arten der verarbeiteten Daten</h3>
         <ul>
-            <li>Bestandsdaten.</li>
-            <li>Zahlungsdaten.</li>
-            <li>Standortdaten.</li>
-            <li>Kontaktdaten.</li>
-            <li>Inhaltsdaten.</li>
-            <li>Vertragsdaten.</li>
-            <li>Nutzungsdaten.</li>
-            <li>Meta-, Kommunikations- und Verfahrensdaten.</li>
+             Bestandsdaten.<br>
+             Zahlungsdaten.<br>
+             Standortdaten.<br>
+             Kontaktdaten.<br>
+             Inhaltsdaten.<br>
+             Vertragsdaten.<br>
+             Nutzungsdaten.<br>
+             Meta-, Kommunikations- und Verfahrensdaten.<br>
         </ul>
         <h3>Kategorien betroffener Personen</h3>
         <ul>
-            <li>Kunden.</li>
-            <li>Interessenten.</li>
-            <li>Kommunikationspartner.</li>
-            <li>Nutzer.</li>
-            <li>Geschäfts- und Vertragspartner.</li>
+             Kunden.<br>
+             Interessenten.<br>
+             Kommunikationspartner.<br>
+             Nutzer.<br>
+             Geschäfts- und Vertragspartner.<br>
         </ul>
         <h3>Zwecke der Verarbeitung</h3>
         <ul>
-            <li>Erbringung vertraglicher Leistungen und Kundenservice.</li>
-            <li>Kontaktanfragen und Kommunikation.</li>
-            <li>Sicherheitsmaßnahmen.</li>
-            <li>Direktmarketing.</li>
-            <li>Büro- und Organisationsverfahren.</li>
-            <li>Verwaltung und Beantwortung von Anfragen.</li>
-            <li>Bereitstellung unseres Onlineangebotes und Nutzerfreundlichkeit.</li>
+             Erbringung vertraglicher Leistungen und Kundenservice.<br>
+             Kontaktanfragen und Kommunikation.<br>
+             Sicherheitsmaßnahmen.<br>
+             Direktmarketing.<br>
+             Büro- und Organisationsverfahren.<br>
+             Verwaltung und Beantwortung von Anfragen.<br>
+             Bereitstellung unseres Onlineangebotes und Nutzerfreundlichkeit.<br>
         </ul>
         <h3 id="m13">Maßgebliche Rechtsgrundlagen</h3>
         <p>Im Folgenden erhalten Sie eine Übersicht der Rechtsgrundlagen der DSGVO, auf deren Basis wir personenbezogene
