@@ -117,9 +117,10 @@
                     }
                 } catch (error) {
                     console.log(error);
-                    if (error.response.status === 400) {
+                    if (error.response.status === 401) {
                         this.error = true;
                         this.message = error.response.data;
+                        alert('Sie müssen sich einloggen um ein Ticket zu kaufen!');
                     }
                 }
             }
