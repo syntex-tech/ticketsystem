@@ -29,8 +29,7 @@
                             <hr class="mb-4 mt-0 d-inline-block mx-auto"
                                 style="width: 60px; background-color: rgb(57, 131, 177); height: 2px" />
                             <p><a href="/imprint" class="read-more">Impressum</a></p>
-                            <!--<p><router-link style="text-decoration: none; color: inherit;" to="/ticketshop"><a class="btn btn-lg btn-primary btn-opac" href="#" role="button">Solo Ticket buchen</a></router-link></p>
--->
+                            <p><a href="/privacy" class="read-more">Datenschutzerklärung</a></p>
                         </div>
                         <!-- Grid column -->
                         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">

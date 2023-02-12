@@ -12,6 +12,7 @@ import ZermatterBergbahn from './components/ZermatterBergbahn.vue'
 import Profile from './components/Profile.vue'
 import Admin from './components/Admin.vue'
 import Imprint from './components/Imprint.vue'
+import Privacy from './components/Privacy.vue'
 
 
 const router = createRouter({
@@ -27,8 +28,8 @@ const router = createRouter({
         {path: '/profile', name: 'Profile', component: Profile},
         {path: '/admin', name: 'Admin', component: Admin},
         {path: '/imprint', name: 'Imprint', component: Imprint},
+        {path: '/privacy', name: 'Privacy', component: Privacy},
 
-        
     ]
 
 })
