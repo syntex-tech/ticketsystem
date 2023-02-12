@@ -1,14 +1,14 @@
 <template>
+    <h1>Admin Dashbord</h1>
     <h1>Hallo {{user.Vorname}}</h1>
     <!-- Admin: true oder false nötig da gerade noch ein bug drin steckt, ohne wird isAdmin nicht übergeben-->
-    <div class="admin-section">
+    <div class="invisible">
         Admin: {{user.isAdmin}}
     </div>
 
     <div v-if="isAdmin">
         <!-- Hier ist der Inhalt der Seite, die nur für Benutzer mit isAdmin=1 sichtbar sein soll -->
         <br><br>
-        <h1>Admin Dashbord</h1>
         <div class="admin-section">
             <h2>Ticket löschen</h2>
             <form @submit.prevent="deleteTicket">
@@ -136,41 +136,59 @@
 </script>
 
 <style scoped>
-    .admin-section {
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+    /* Allgemeine Stilvorgaben */
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
     }
 
-    input[type="email"] {
-        padding: 10px;
-        font-size: 18px;
-        width: 25%;
-        margin-bottom: 0px;
-        border: 1px solid gray;
+    /* Überschriften */
+    h1, h2 {
+        color: #333;
+        text-align: center;
+    }
+
+    /* Formulare */
+    form {
+        margin: 20px auto;
+        width: 400px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 2px 2px 5px #ccc;
         border-radius: 5px;
     }
 
-    button {
-        padding: 10px 20px;
-        background-color: rgb(0, 179, 74);
-        border: none;
-        margin-bottom: 50px;
-        border-radius: 5px;
-        color: white;
-        font-size: 18px;
-        cursor: pointer;
-        transition: background 0.2s ease-in-out;
-    }
-
-        button:hover {
-            background: #00852c;
+        /* Formular-Eingabefelder */
+        form input[type="text"], form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
         }
 
-    .spacer {
-        height: 10px;
+        /* Formular-Schaltflächen */
+        form button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    /* Admin-Abschnitte */
+    .admin-section {
+        margin-top: 40px;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .invisible {
+        color: white
     }
 </style>
+
 

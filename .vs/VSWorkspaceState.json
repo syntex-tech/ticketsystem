@@ -5,11 +5,9 @@
     "\\backend-nodejs\\model",
     "\\backend-nodejs\\routes",
     "\\frontend-vue",
-    "\\frontend-vue\\public",
     "\\frontend-vue\\src",
-    "\\frontend-vue\\src\\assets",
     "\\frontend-vue\\src\\components"
   ],
-  "SelectedNode": "\\frontend-vue\\src\\components\\Ticketshop.vue",
+  "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
 }
