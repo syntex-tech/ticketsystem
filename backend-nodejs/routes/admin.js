@@ -41,30 +41,27 @@ router.post('/ticketScannen', isAdmin, async (req, res) => {
 });
 
 router.post('/ticketScannenZermatt', isAdmin, async (req, res) => {
-    res.contentType('application/json');
-    res.type('json');
+    try {
+        const skipassticketid = await SkipassTicket.findById({ _id: req.body._id });
+        if (!skipassticketid) {
+            return res.status(404).send('Das Ticket wurde nicht gefunden');
+        } else {
+            if (skipassticketid.AnzahlZutritteZermatterBergbahnen > 0) {
+                const zermatt = await SkipassTicket.findOneAndUpdate({
+                    _id: req.body._id,
+                },
+                    {
+                        $inc: { AnzahlZutritteZermatterBergbahnen: -1 }
+                    });
+                const verbleibendeZutritte = zermatt.AnzahlZutritteZermatterBergbahnen - 1;
+                return res.send('Die Anzahl der Zutritte wurde aktualisiert! Verbleibende Zutritte: ' + verbleibendeZutritte)
+            } else {
+                return res.send("Sie haben bereits alle 5 Zutritte der Zermatter Bergbahn verbraucht!")
+            }
+        }
+    } catch (error) {
+        return res.status(500).send('Ein Fehler ist aufgetreten');
+    }
 
-    //Checking if the id exist
-    const AnzahlZutritte = await SkipassTicket.findOne({
-        _id: req.body._id,
-    }
-    );
-    if (!SkipassTicket) {
-        res.status(400);
-        return res.send('Das Ticket ist nicht gültig!');
-    }
-
-    if (AnzahlZutritte.AnzahlZutritteZermatterBergbahnen > 0) {
-        const zermatt = await SkipassTicket.findOneAndUpdate({
-            _id: req.body._id,
-        },
-            {
-                $inc: { AnzahlZutritteZermatterBergbahnen: -1 }
-            });
-        const verbleibendeZutritte = zermatt.AnzahlZutritteZermatterBergbahnen - 1;
-        return res.send('Die Anzahl der Zutritte wurde aktualisiert! Verbleibende Zutritte: ' + verbleibendeZutritte)
-    } else {
-        return res.send("Sie haben bereits alle 5 Zutritte der Zermatter Bergbahn verbraucht!")
-    }
 });
 module.exports = router;
