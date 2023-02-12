@@ -11,6 +11,8 @@ import Register from './components/Register.vue'
 import ZermatterBergbahn from './components/ZermatterBergbahn.vue'
 import Profile from './components/Profile.vue'
 import Admin from './components/Admin.vue'
+import Imprint from './components/Imprint.vue'
+
 
 const router = createRouter({
     history: createWebHistory(),
@@ -24,6 +26,8 @@ const router = createRouter({
         {path: '/zermatterbergbahn', name: 'ZermatterBergbahn', component: ZermatterBergbahn},
         {path: '/profile', name: 'Profile', component: Profile},
         {path: '/admin', name: 'Admin', component: Admin},
+        {path: '/imprint', name: 'Imprint', component: Imprint},
+
         
     ]
 

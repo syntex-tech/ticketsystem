@@ -28,7 +28,7 @@
                     <button type="submit" class="form-submit-btn">Skipass Kaufen</button>
                     </form>
                     <div v-if="error" class="error-hint">{{ error }}</div>
-                    <div v-if="submitted" class="success-hint">Sie haben den Oberwalliser Skipass gekauft! Ihr Ticket finden sie in ihrer E-Mail und in ihrem Profil</div>
+                    <div v-if="submitted" class="success-hint">Du hast soeben den Oberwalliser Skipass erworben! Dein Ticket findest du in deinem E-Mail Postfach und in deinem Profil.</div>
                     
                 </div>
                 </div>
